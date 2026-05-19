@@ -85,6 +85,9 @@
     <Compile Include="UserControls\ucThongKe.Designer.cs">
       <DependentUpon>ucThongKe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GiaoDien\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
