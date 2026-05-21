@@ -16,5 +16,10 @@ namespace AppCoffe.UserControls
         {
             InitializeComponent();
         }
+
+        private void ucGoiMon_Load(object sender, EventArgs e)
+        {
+            helkodsaidndsadhnsoihdfiosahnfiosadoiwhqpi
+        }
     }
 }
