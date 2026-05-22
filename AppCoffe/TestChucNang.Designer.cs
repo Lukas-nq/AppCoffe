@@ -33,7 +33,7 @@
             // 
             // ucQuanLyMenu1
             // 
-            this.ucQuanLyMenu1.Location = new System.Drawing.Point(0, 0);
+            this.ucQuanLyMenu1.Location = new System.Drawing.Point(92, 45);
             this.ucQuanLyMenu1.Name = "ucQuanLyMenu1";
             this.ucQuanLyMenu1.Size = new System.Drawing.Size(879, 529);
             this.ucQuanLyMenu1.TabIndex = 0;

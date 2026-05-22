@@ -50,14 +50,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnChonAnh = new System.Windows.Forms.Button();
-            this.picAnhMonAN = new System.Windows.Forms.PictureBox();
+            this.picAnhMonAn = new System.Windows.Forms.PictureBox();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.pnlCongCu.SuspendLayout();
             this.pnlRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnhMonAN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnhMonAn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -99,6 +99,7 @@
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(521, 384);
             this.dgvMenu.TabIndex = 1;
+            this.dgvMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellClick);
             // 
             // pnlCongCu
             // 
@@ -133,6 +134,7 @@
             this.cboLocLoai.Name = "cboLocLoai";
             this.cboLocLoai.Size = new System.Drawing.Size(121, 33);
             this.cboLocLoai.TabIndex = 3;
+            this.cboLocLoai.SelectedIndexChanged += new System.EventHandler(this.cboLocLoai_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -151,6 +153,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(121, 30);
             this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -177,7 +180,7 @@
             this.pnlRight.Controls.Add(this.label7);
             this.pnlRight.Controls.Add(this.label4);
             this.pnlRight.Controls.Add(this.btnChonAnh);
-            this.pnlRight.Controls.Add(this.picAnhMonAN);
+            this.pnlRight.Controls.Add(this.picAnhMonAn);
             this.pnlRight.Controls.Add(this.btnQuayLai);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRight.Location = new System.Drawing.Point(530, 3);
@@ -305,17 +308,17 @@
             this.btnChonAnh.Text = "Chọn Ảnh";
             this.btnChonAnh.UseVisualStyleBackColor = true;
             // 
-            // picAnhMonAN
+            // picAnhMonAn
             // 
-            this.picAnhMonAN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.picAnhMonAn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picAnhMonAN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picAnhMonAN.Location = new System.Drawing.Point(53, 61);
-            this.picAnhMonAN.Name = "picAnhMonAN";
-            this.picAnhMonAN.Size = new System.Drawing.Size(245, 146);
-            this.picAnhMonAN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAnhMonAN.TabIndex = 6;
-            this.picAnhMonAN.TabStop = false;
+            this.picAnhMonAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picAnhMonAn.Location = new System.Drawing.Point(53, 61);
+            this.picAnhMonAn.Name = "picAnhMonAn";
+            this.picAnhMonAn.Size = new System.Drawing.Size(245, 146);
+            this.picAnhMonAn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAnhMonAn.TabIndex = 6;
+            this.picAnhMonAn.TabStop = false;
             // 
             // btnQuayLai
             // 
@@ -342,7 +345,7 @@
             this.pnlCongCu.PerformLayout();
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnhMonAN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnhMonAn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,7 +372,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnChonAnh;
-        private System.Windows.Forms.PictureBox picAnhMonAN;
+        private System.Windows.Forms.PictureBox picAnhMonAn;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.TextBox txtMaLoai;
         private System.Windows.Forms.Label label7;

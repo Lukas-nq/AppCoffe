@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\AppCoffe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|c:\\users\\admin\\desktop\\appcoffe\\appcoffe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|c:\\users\\admin\\desktop\\appcoffe\\appcoffe\\testchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\testchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|c:\\users\\admin\\desktop\\appcoffe\\appcoffe\\usercontrols\\ucquanlymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\Admin\\Desktop\\AppCoffe\\appcoffe\\usercontrols\\ucquanlymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\ucquanlymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\Admin\\Desktop\\AppCoffe\\appcoffe\\usercontrols\\ucquanlymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\ucquanlymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\Admin\\Desktop\\AppCoffe\\appcoffe\\testchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\testchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,19 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\Program.cs",
-              "RelativeDocumentMoniker": "AppCoffe\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\Program.cs",
-              "RelativeToolTip": "AppCoffe\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAJAAAAAAAAAA==",
+              "Title": "ucQuanLyMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\UserControls\\ucQuanLyMenu.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucQuanLyMenu.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\UserControls\\ucQuanLyMenu.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\ucQuanLyMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T14:01:44.85Z",
+              "WhenOpened": "2026-05-22T13:37:42.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TestChucNang.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\TestChucNang.cs",
               "RelativeDocumentMoniker": "AppCoffe\\TestChucNang.cs",
@@ -75,20 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ucQuanLyMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\UserControls\\ucQuanLyMenu.cs",
-              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucQuanLyMenu.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\UserControls\\ucQuanLyMenu.cs",
-              "RelativeToolTip": "AppCoffe\\UserControls\\ucQuanLyMenu.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T13:37:42.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ucQuanLyMenu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\AppCoffe\\AppCoffe\\UserControls\\ucQuanLyMenu.cs",
               "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucQuanLyMenu.cs",
