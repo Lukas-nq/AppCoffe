@@ -97,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucQuanLyMenu.resx">
+      <DependentUpon>ucQuanLyMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucGoiMon.resx">
       <DependentUpon>ucGoiMon.cs</DependentUpon>
     </EmbeddedResource>
