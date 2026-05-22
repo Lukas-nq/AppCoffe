@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucQuanLyMenu1 = new AppCoffe.UserControls.ucQuanLyMenu();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // ucQuanLyMenu1
             // 
             this.ucQuanLyMenu1.Location = new System.Drawing.Point(92, 45);
@@ -38,12 +38,13 @@
             this.ucQuanLyMenu1.Size = new System.Drawing.Size(879, 529);
             this.ucQuanLyMenu1.TabIndex = 0;
             // 
+=======
+>>>>>>> db33c4ea1daa0bf4d46b1c7909edb0a5f5a141fe
             // TestChucNang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 625);
-            this.Controls.Add(this.ucQuanLyMenu1);
+            this.ClientSize = new System.Drawing.Size(1132, 785);
             this.Name = "TestChucNang";
             this.Text = "TestChucNang";
             this.ResumeLayout(false);
@@ -51,7 +52,5 @@
         }
 
         #endregion
-
-        private UserControls.ucQuanLyMenu ucQuanLyMenu1;
     }
 }

@@ -94,6 +94,7 @@
             this.dgvMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMenu.Location = new System.Drawing.Point(0, 139);
             this.dgvMenu.Name = "dgvMenu";
+            this.dgvMenu.ReadOnly = true;
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 24;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
