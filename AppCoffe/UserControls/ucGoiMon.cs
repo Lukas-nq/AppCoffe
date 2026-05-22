@@ -19,7 +19,7 @@ namespace AppCoffe.UserControls
 
         private void ucGoiMon_Load(object sender, EventArgs e)
         {
-            helkodsaidndsadhnsoihdfiosahnfiosadoiwhqpi
+            helo bf
         }
     }
 }
