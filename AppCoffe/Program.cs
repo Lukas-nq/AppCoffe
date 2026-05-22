@@ -16,7 +16,7 @@ namespace AppCoffe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GiaoDien.frmLogin());
+            Application.Run(new TestChucNang());
         }
     }
 }

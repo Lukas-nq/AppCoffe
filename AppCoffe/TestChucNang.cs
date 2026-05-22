@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppCoffe.UserControls
+namespace AppCoffe
 {
-    public partial class ucGoiMon : UserControl
+    public partial class TestChucNang : Form
     {
-        public ucGoiMon()
+        public TestChucNang()
         {
             InitializeComponent();
-        }
-
-        private void ucGoiMon_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

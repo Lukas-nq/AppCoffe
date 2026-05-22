@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestChucNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestChucNang.Designer.cs">
+      <DependentUpon>TestChucNang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucGoiMon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestChucNang.resx">
+      <DependentUpon>TestChucNang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQuanLyMenu.resx">
       <DependentUpon>ucQuanLyMenu.cs</DependentUpon>
     </EmbeddedResource>
