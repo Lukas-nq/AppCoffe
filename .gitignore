@@ -1,0 +1,14 @@
+# Các file rác hệ thống của Visual Studio
+.vs/
+*.vsidx
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.json
+
+# Thư mục sinh ra khi chạy code (Build Output)
+[Bb]in/
+[Oo]bj/
+AppCoffe/bin/
+AppCoffe/obj/
