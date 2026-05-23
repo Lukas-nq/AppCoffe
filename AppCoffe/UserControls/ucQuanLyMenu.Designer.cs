@@ -192,78 +192,81 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoa.Location = new System.Drawing.Point(248, 452);
+            this.btnXoa.Location = new System.Drawing.Point(237, 455);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 68);
+            this.btnXoa.Size = new System.Drawing.Size(95, 68);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSua.Location = new System.Drawing.Point(133, 452);
+            this.btnSua.Location = new System.Drawing.Point(23, 455);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 68);
+            this.btnSua.Size = new System.Drawing.Size(92, 68);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThem.Location = new System.Drawing.Point(22, 452);
+            this.btnThem.Location = new System.Drawing.Point(133, 455);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 68);
+            this.btnThem.Size = new System.Drawing.Size(89, 68);
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm ";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtDonGia
             // 
             this.txtDonGia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtDonGia.Location = new System.Drawing.Point(180, 400);
+            this.txtDonGia.Location = new System.Drawing.Point(133, 400);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(118, 30);
+            this.txtDonGia.Size = new System.Drawing.Size(165, 30);
             this.txtDonGia.TabIndex = 9;
             // 
             // txtTenMon
             // 
             this.txtTenMon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenMon.Location = new System.Drawing.Point(180, 358);
+            this.txtTenMon.Location = new System.Drawing.Point(133, 358);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.ReadOnly = true;
-            this.txtTenMon.Size = new System.Drawing.Size(118, 30);
+            this.txtTenMon.Size = new System.Drawing.Size(165, 30);
             this.txtTenMon.TabIndex = 9;
             // 
             // txtMaLoai
             // 
             this.txtMaLoai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaLoai.Location = new System.Drawing.Point(180, 260);
+            this.txtMaLoai.Location = new System.Drawing.Point(133, 260);
             this.txtMaLoai.Name = "txtMaLoai";
             this.txtMaLoai.ReadOnly = true;
-            this.txtMaLoai.Size = new System.Drawing.Size(118, 30);
+            this.txtMaLoai.Size = new System.Drawing.Size(165, 30);
             this.txtMaLoai.TabIndex = 9;
             // 
             // txtMaMon
             // 
             this.txtMaMon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaMon.Location = new System.Drawing.Point(180, 310);
+            this.txtMaMon.Location = new System.Drawing.Point(133, 310);
             this.txtMaMon.Name = "txtMaMon";
             this.txtMaMon.ReadOnly = true;
-            this.txtMaMon.Size = new System.Drawing.Size(118, 30);
+            this.txtMaMon.Size = new System.Drawing.Size(165, 30);
             this.txtMaMon.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(61, 403);
+            this.label6.Location = new System.Drawing.Point(34, 403);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 25);
             this.label6.TabIndex = 8;
@@ -273,7 +276,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(58, 358);
+            this.label5.Location = new System.Drawing.Point(31, 358);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 25);
             this.label5.TabIndex = 8;
@@ -283,7 +286,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(58, 265);
+            this.label7.Location = new System.Drawing.Point(31, 263);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 25);
             this.label7.TabIndex = 8;
@@ -293,7 +296,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(58, 315);
+            this.label4.Location = new System.Drawing.Point(31, 310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 8;
@@ -308,6 +311,7 @@
             this.btnChonAnh.TabIndex = 7;
             this.btnChonAnh.Text = "Chọn Ảnh";
             this.btnChonAnh.UseVisualStyleBackColor = true;
+            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
             // 
             // picAnhMonAn
             // 
