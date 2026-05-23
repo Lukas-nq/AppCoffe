@@ -1,6 +1,6 @@
 ﻿namespace AppCoffe.UserControls
 {
-    partial class ucGoiMon
+    public partial class ucGoiMon  
     {
         /// <summary> 
         /// Required designer variable.

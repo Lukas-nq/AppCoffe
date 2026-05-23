@@ -12,3 +12,17 @@
 [Oo]bj/
 AppCoffe/bin/
 AppCoffe/obj/
+
+# Logs and packages
+*.log
+packages/
+
+# VS generated
+*.pdb
+*.exe
+*.dll
+*.cache
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
