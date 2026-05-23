@@ -21,5 +21,10 @@ namespace AppCoffe
         {
 
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
