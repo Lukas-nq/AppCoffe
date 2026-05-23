@@ -26,3 +26,4 @@ packages/
 # Resharper
 _ReSharper*/
 *.DotSettings.user
+/AppCoffe/bin/Debug/AppCoffe.exe.config
