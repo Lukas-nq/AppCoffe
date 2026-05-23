@@ -130,8 +130,8 @@
     <EmbeddedResource Include="UserControls\ucGoiMon.resx">
       <DependentUpon>ucGoiMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\ucSoDoBan.resx">
+      <DependentUpon>ucSoDoBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
