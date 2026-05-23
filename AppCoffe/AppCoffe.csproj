@@ -80,7 +80,7 @@
       <DependentUpon>ucQuanLyMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucSoDoBan.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControls\ucSoDoBan.Designer.cs">
       <DependentUpon>ucSoDoBan.cs</DependentUpon>

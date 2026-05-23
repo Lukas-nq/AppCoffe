@@ -150,10 +150,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(782, 492);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ucSoDoBan";
-            this.Size = new System.Drawing.Size(798, 531);
+            this.Load += new System.EventHandler(this.ucSoDoBan_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
