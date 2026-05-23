@@ -67,6 +67,12 @@
     <Compile Include="TestChucNang.Designer.cs">
       <DependentUpon>TestChucNang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucGoiMon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     <Compile Include="UserControls\ucThongKe.Designer.cs">
       <DependentUpon>ucThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GiaoDien\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,11 +121,17 @@
     <EmbeddedResource Include="TestChucNang.resx">
       <DependentUpon>TestChucNang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQuanLyMenu.resx">
       <DependentUpon>ucQuanLyMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucGoiMon.resx">
       <DependentUpon>ucGoiMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -7,18 +7,86 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AppCoffe.UserControls
 {
     public partial class ucGoiMon : UserControl
     {
+        string chuoiKetNoi = @"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeePOSLite;Integrated Security=True";
         public ucGoiMon()
         {
             InitializeComponent();
         }
-
         private void ucGoiMon_Load(object sender, EventArgs e)
         {
+            LoadThucDon("SELECT * FROM MonAn");
+        }
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string sqlTimKiem = "SELECT * FROM MonAn WHERE TenMon LIKE N'%" + txtTimKiem.Text + "%'";
+            LoadThucDon(sqlTimKiem);
+        }       
+        public void LoadThucDon(string cauLenhSQL)
+        {
+            flpMenu.Controls.Clear();
+
+            SqlConnection conn = new SqlConnection(chuoiKetNoi);
+            SqlCommand cmd = new SqlCommand(cauLenhSQL, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    usCardMonAn theMonAn = new usCardMonAn();
+
+                    string ten = rd["TenMon"].ToString();
+                    decimal gia = Convert.ToDecimal(rd["Gia"]);
+                    string anh = Application.StartupPath + "\\Images\\" + rd["Anh"].ToString();
+
+                    theMonAn.TruyenDuLieu(ten, gia, anh);
+
+                    theMonAn.TheBiBam += SuKien_Mo_Popup;
+
+                    flpMenu.Controls.Add(theMonAn);
+                }
+                rd.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi load món: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        private void SuKien_Mo_Popup(object sender, EventArgs e)
+        {
+            usCardMonAn theVuaBam = (usCardMonAn)sender;
+            frmPopupTreo popup = new frmPopupTreo();
+            popup.tenMonNhan = theVuaBam.tenMonLuu;
+            popup.giaMonNhan = theVuaBam.giaMonLuu;           
+            if (popup.ShowDialog() == DialogResult.OK)
+            {
+                int soLuong = popup.soLuongChot;
+                decimal donGia = theVuaBam.giaMonLuu;
+                decimal thanhTien = soLuong * donGia;
+                dgvGioHang.Rows.Add(theVuaBam.tenMonLuu, soLuong, donGia, thanhTien, popup.ghiChuChot);
+                TinhTongTien();
+            }
+        }
+        public void TinhTongTien()
+        {
+            decimal tong = 0;     
+            for (int i = 0; i < dgvGioHang.Rows.Count; i++)
+            {
+                tong = tong + Convert.ToDecimal(dgvGioHang.Rows[i].Cells[3].Value);
+            }
+            lblTongTien.Text = tong.ToString("#,##0") + " VNĐ";
         }
     }
 }
