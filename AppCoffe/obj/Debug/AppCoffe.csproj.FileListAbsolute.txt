@@ -41,3 +41,7 @@ C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.TestChucNang.re
 C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.UserControls.ucQuanLyMenu.resources
 C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.UserControls.UcGoiMon.resources
 C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.UserControls.frmPopupTreo.resources
+C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.GiaoDien.frmMainMenu.resources
+C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.TestChucNang.resources
+C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.UserControls.ucQuanLyMenu.resources
+C:\Users\lienq\source\repos\AppCoffe\AppCoffe\obj\Debug\AppCoffe.UserControls.UcGoiMon.resources
