@@ -1,6 +1,6 @@
 ﻿namespace AppCoffe.UserControls
 {
-    partial class ucGoiMon
+    public partial class UcGoiMon  
     {
         /// <summary> 
         /// Required designer variable.
@@ -47,7 +47,7 @@
             this.Controls.Add(this.button1);
             this.Name = "ucGoiMon";
             this.Size = new System.Drawing.Size(992, 467);
-            this.Load += new System.EventHandler(this.ucGoiMon_Load);
+            this.Load += new System.EventHandler(this.UcGoiMon_Load);
             this.ResumeLayout(false);
 
         }
