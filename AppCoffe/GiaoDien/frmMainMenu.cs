@@ -18,12 +18,14 @@ namespace AppCoffe.GiaoDien
         {
             InitializeComponent();
             this.userRole = role;
+            this.btnThongke.Click += btnThongke_Click;
         }
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            if (userRole == "Staff")
+            if (!string.Equals(userRole, "Admin", StringComparison.OrdinalIgnoreCase))
             {
                 btnThongke.Visible = false;
+                btnThongke.Enabled = false;
             }
         }
 
@@ -38,6 +40,28 @@ namespace AppCoffe.GiaoDien
             this.Close();
             frmLogin login = new frmLogin();
             login.Show();
+        }
+
+        private void btnThongke_Click(object sender, EventArgs e)
+        {
+            if (!string.Equals(userRole, "Admin", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Chỉ tài khoản Admin mới được xem thống kê doanh thu.", "Không có quyền truy cập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (Form formThongKe = new Form())
+            {
+                formThongKe.Text = "Báo cáo thống kê doanh thu";
+                formThongKe.StartPosition = FormStartPosition.CenterParent;
+                formThongKe.WindowState = FormWindowState.Maximized;
+
+                ucThongKe thongKe = new ucThongKe();
+                thongKe.Dock = DockStyle.Fill;
+                formThongKe.Controls.Add(thongKe);
+
+                formThongKe.ShowDialog(this);
+            }
         }
     }
 }
