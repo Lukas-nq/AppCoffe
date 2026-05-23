@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CoffeePOSLite.Classes;
 
 namespace AppCoffe.GiaoDien
 {
     public partial class frmLogin : Form
     {
         public static string Quyennguoidung = "";
-        string connectionString = @"Data Source=.;Initial Catalog=QuanLyCafe;Integrated Security=True";
         public frmLogin()
         {
             InitializeComponent();
@@ -38,10 +38,10 @@ namespace AppCoffe.GiaoDien
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {// Sử dụng khối using để tự động đóng kết nối sau khi dùng xong
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = DbContext.GetConnection())
             {
                 // [2] Truy vấn kiểm tra tài khoản và mật khẩu
-                string sql = "SELECT * FROM NguoiDung WHERE TaiKhoan=@user AND MatKhau=@pass";
+                string sql = "SELECT TaiKhoan, Quyen FROM NguoiDung WHERE TaiKhoan=@user AND MatKhau=@pass";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@user", txtdangnhap.Text);
                 cmd.Parameters.AddWithValue("@pass", txtmatkhau.Text);
@@ -51,8 +51,10 @@ namespace AppCoffe.GiaoDien
 
                 if (reader.Read()) // Nếu tìm thấy tài khoản hợp lệ
                 {
-                    // [1, 2] Phân quyền: Mặc định admin là Quản trị, còn lại là Nhân viên
-                    string role = (txtdangnhap.Text.ToLower() == "admin") ? "Admin" : "Staff";
+                    string role = reader["Quyen"].ToString();
+                    LuuThongTin.TaiKhoan = reader["TaiKhoan"].ToString();
+                    LuuThongTin.Quyen = role;
+                    Quyennguoidung = role;
 
                     // Chuyển sang màn hình chính và truyền quyền (role) sang đó
                     frmMainMenu main = new frmMainMenu(role);

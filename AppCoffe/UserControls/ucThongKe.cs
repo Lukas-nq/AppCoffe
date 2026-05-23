@@ -131,12 +131,12 @@ namespace AppCoffe.UserControls
         private BaoCaoSchema TaoSchemaBaoCao(SqlConnection conn)
         {
             TableInfo bangHoaDon = TimBang(conn, "HoaDon", "HoaDonBanHang", "Bill", "Bills");
-            TableInfo bangChiTiet = TimBang(conn, "ChiTietHoaDon", "CTHoaDon", "CTHD", "HoaDonChiTiet", "BillDetails");
+            TableInfo bangChiTiet = TimBang(conn, "ChiTietHD", "ChiTietHoaDon", "CTHoaDon", "CTHD", "HoaDonChiTiet", "BillDetails");
             TableInfo bangMonAn = TimBang(conn, "MonAn", "Mon", "ThucDon", "Menu");
 
             if (bangHoaDon == null || bangChiTiet == null || bangMonAn == null)
             {
-                throw new InvalidOperationException("Không tìm thấy đủ bảng HoaDon, ChiTietHoaDon/CTHoaDon và MonAn trong database.");
+                throw new InvalidOperationException("Không tìm thấy đủ bảng HoaDon, ChiTietHD và MonAn trong database.");
             }
 
             BaoCaoSchema schema = new BaoCaoSchema();

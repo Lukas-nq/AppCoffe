@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CoffeePOSLite.Classes;
 
 namespace AppCoffe.UserControls
 {
     public partial class ucGoiMon : UserControl
     {
-        string chuoiKetNoi = @"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeePOSLite;Integrated Security=True";
         public ucGoiMon()
         {
             InitializeComponent();

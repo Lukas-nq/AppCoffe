@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CoffeePOSLite.Classes;
 
 namespace AppCoffe.UserControls
 {
     public partial class ucSoDoBan : Form 
     {
-        string strCon = @"Data Source=.;Initial Catalog=QuanLyCafe;Integrated Security=True";
         public ucSoDoBan()
         {
             InitializeComponent();
@@ -31,8 +31,7 @@ namespace AppCoffe.UserControls
 
                 if (r == DialogResult.Yes)
                 {
-                    // Thực thi lệnh đổi màu nền sang màu đỏ
-                    if (UpdateTableStatus(tenBan, "có khách"))
+                    if (UpdateTableStatus(tenBan, 1))
                     {
                         btnSelected.BackColor = Color.Red;
                     }
@@ -45,8 +44,7 @@ namespace AppCoffe.UserControls
 
                 if (r == DialogResult.Yes)
                 {
-                    // Đưa màu nền nút bấm quay trở lại màu xanh
-                    if (UpdateTableStatus(tenBan, "Trống"))
+                    if (UpdateTableStatus(tenBan, 0))
                     {
                         btnSelected.BackColor = Color.Green;
                     }
@@ -55,13 +53,12 @@ namespace AppCoffe.UserControls
             }
         }
 
-        private bool UpdateTableStatus(string tenBan, string trangThai)
+        private bool UpdateTableStatus(string tenBan, int trangThai)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(strCon))
+                using (SqlConnection conn = DbContext.GetConnection())
                 {
-                    // Cập nhật tức thì trạng thái vào cơ sở dữ liệu SQL Server [1]
                     string sql = "UPDATE Ban SET TrangThai = @status WHERE TenBan = @name";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@status", trangThai);
@@ -84,7 +81,41 @@ namespace AppCoffe.UserControls
 
         private void ucSoDoBan_Load(object sender, EventArgs e)
         {
+            TaiDanhSachBan();
+        }
 
+        private void TaiDanhSachBan()
+        {
+            try
+            {
+                Button[] buttons = { btnBan1, btnBan2, btnBan3, btnBan4, btnBan5 };
+                foreach (Button button in buttons)
+                {
+                    button.Visible = false;
+                }
+
+                using (SqlConnection conn = DbContext.GetConnection())
+                using (SqlCommand cmd = new SqlCommand("SELECT TOP 5 TenBan, TrangThai FROM Ban ORDER BY MaBan", conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        int index = 0;
+                        while (reader.Read() && index < buttons.Length)
+                        {
+                            Button button = buttons[index];
+                            button.Text = reader["TenBan"].ToString();
+                            button.BackColor = Convert.ToInt32(reader["TrangThai"]) == 1 ? Color.Red : Color.Green;
+                            button.Visible = true;
+                            index++;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải sơ đồ bàn: " + ex.Message);
+            }
         }
     }
 }
