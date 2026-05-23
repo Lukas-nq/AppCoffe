@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\appcoffe\\usercontrols\\ucgoimon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\ucgoimon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\appcoffe\\usercontrols\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\appcoffe\\usercontrols\\ucgoimon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\ucgoimon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|c:\\users\\lienq\\source\\repos\\appcoffe\\appcoffe\\usercontrols\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|c:\\users\\lienq\\source\\repos\\appcoffe\\appcoffe\\usercontrols\\ucgoimon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:AppCoffe\\UserControls\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:AppCoffe\\UserControls\\ucGoiMon.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:AppCoffe\\UserControls\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:AppCoffe\\UserControls\\UserControl1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:AppCoffe\\UserControls\\UserControl1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:AppCoffe\\UserControls\\ucGoiMon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\appcoffe\\testchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\testchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|C:\\Users\\lienq\\source\\repos\\AppCoffe\\appcoffe\\usercontrols\\ucgoimon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\usercontrols\\ucgoimon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|c:\\users\\lienq\\source\\repos\\appcoffe\\appcoffe\\classes\\luuthongtin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29E34CE7-F5A1-45C7-A89E-ACA49EB123CE}|AppCoffe\\AppCoffe.csproj|solutionrelative:appcoffe\\classes\\luuthongtin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ucGoiMon.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
-              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
-              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
-              "RelativeToolTip": "AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
-              "ViewState": "AgIAAEYBAAAAAAAAAADwv1ABAAAAAAAAAAAAAA==",
+              "Title": "UserControl1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\UserControl1.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.cs [Design]",
+              "RelativeToolTip": "AppCoffe\\UserControls\\UserControl1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T03:17:35.477Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T08:42:10.108Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -68,41 +90,113 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LuuThongTin.cs",
-              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\Classes\\LuuThongTin.cs",
-              "RelativeDocumentMoniker": "AppCoffe\\Classes\\LuuThongTin.cs",
-              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\Classes\\LuuThongTin.cs",
-              "RelativeToolTip": "AppCoffe\\Classes\\LuuThongTin.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAewBMAAACKAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\Form1.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\Form1.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T04:30:00.41Z",
+              "WhenOpened": "2026-05-23T06:53:25.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "ucGoiMon.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\ucGoiMon.Designer.cs",
+              "ViewState": "AgIAAEcBAAAAAAAAAADwv1EBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T03:17:35.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.Designer.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T08:42:09.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserControl1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.Designer.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\UserControl1.Designer.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.Designer.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\UserControl1.Designer.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T08:42:09.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserControl1.cs",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\UserControl1.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\UserControl1.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\UserControl1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T08:42:09.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ucGoiMon.cs",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucGoiMon.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs",
+              "RelativeToolTip": "AppCoffe\\UserControls\\ucGoiMon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T03:13:51.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TestChucNang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\TestChucNang.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\TestChucNang.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\TestChucNang.cs [Design]",
+              "RelativeToolTip": "AppCoffe\\TestChucNang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:09:20.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ucGoiMon.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs",
               "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucGoiMon.cs",
               "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs [Design]",
               "RelativeToolTip": "AppCoffe\\UserControls\\ucGoiMon.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T04:22:22.667Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-23T04:22:22.667Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ucGoiMon.cs",
-              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs",
-              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\ucGoiMon.cs",
-              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\ucGoiMon.cs",
-              "RelativeToolTip": "AppCoffe\\UserControls\\ucGoiMon.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwAwAAAAZAAAAAAAAAA==",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.cs",
+              "RelativeDocumentMoniker": "AppCoffe\\UserControls\\Form1.cs",
+              "ToolTip": "C:\\Users\\lienq\\source\\repos\\AppCoffe\\AppCoffe\\UserControls\\Form1.cs [Design]",
+              "RelativeToolTip": "AppCoffe\\UserControls\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T03:13:51.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T06:30:36.65Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
