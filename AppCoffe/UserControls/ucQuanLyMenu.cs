@@ -144,6 +144,7 @@ namespace AppCoffe.UserControls
             TaiDanhSachMenu();
         }
 
+<<<<<<< HEAD
         private bool KiemTraMaLoaiHopLe(string maLoai)
         {
             string sql = "SELECT COUNT(*) FROM [DanhMuc] WHERE MaLoai = @MaLoai";
@@ -386,5 +387,11 @@ namespace AppCoffe.UserControls
         }
 
         
+=======
+        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+>>>>>>> c025e223932a20aa4ec8df41dbf595ef4aaa3a8d
     }
 }
