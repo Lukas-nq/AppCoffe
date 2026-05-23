@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace AppCoffe.UserControls
 {
-    public partial class UcGoiMon : UserControl
+    public partial class ucGoiMon : UserControl
     {
-        public UcGoiMon()
+        public ucGoiMon()
         {
             InitializeComponent();
         }
 
-        private void UcGoiMon_Load(object sender, EventArgs e)
+        private void ucGoiMon_Load(object sender, EventArgs e)
         {
         }
     }

@@ -101,6 +101,7 @@
             this.dgvMenu.Size = new System.Drawing.Size(521, 384);
             this.dgvMenu.TabIndex = 1;
             this.dgvMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellClick);
+            this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
             // 
             // pnlCongCu
             // 

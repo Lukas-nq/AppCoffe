@@ -133,5 +133,10 @@ namespace AppCoffe.UserControls
             }
             TaiDanhSachMenu();
         }
+
+        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
