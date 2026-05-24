@@ -110,29 +110,9 @@ namespace AppCoffe.UserControls
                 txtDonGia.Text = row.Cells["Đơn Giá"].Value.ToString();
                 txtMaLoai.Text = row.Cells["Mã Loại"].Value.ToString();
 
-                // hiển thị ảnh 
-                string tenFileAnh = row.Cells["Anh"].Value.ToString();
-                if (!string.IsNullOrEmpty(tenFileAnh))
-                {
-                    string thuMucAnh = System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn");
-                    string duongDanAnhDayDu = System.IO.Path.Combine(thuMucAnh, tenFileAnh);
-
-                    if (System.IO.File.Exists(duongDanAnhDayDu))
-                    {
-                        using (System.IO.FileStream fs = new System.IO.FileStream(duongDanAnhDayDu, System.IO.FileMode.Open, System.IO.FileAccess.Read))
-                        {
-                            picAnhMonAn.Image = Image.FromStream(fs);
-                        }
-                    }
-                    else
-                    {
-                        picAnhMonAn.Image = null;
-                    }
-                }
-                else
-                {
-                    picAnhMonAn.Image = null;
-                }
+                string tenFileAnh = row.Cells["Anh"].Value == DBNull.Value ? "" : row.Cells["Anh"].Value.ToString();
+                HienThiAnhMon(tenFileAnh);
+                tenFileAnhDuocChon = "";
             }
         }
 
@@ -231,17 +211,10 @@ namespace AppCoffe.UserControls
                         {
                             cmd.Parameters.AddWithValue("@MaMon", txtMaMon.Text.Trim());
                             cmd.Parameters.AddWithValue("@TenMon", txtTenMon.Text.Trim());
-                            cmd.Parameters.AddWithValue("@Gia", Convert.ToDecimal(txtDonGia.Text.Trim()));
+                            cmd.Parameters.Add("@Gia", SqlDbType.Int).Value = Convert.ToInt32(txtDonGia.Text.Trim());
                             cmd.Parameters.AddWithValue("@MaLoai", txtMaLoai.Text.Trim());
-
-                            if (!string.IsNullOrEmpty(tenFileAnhDuocChon))
-                            {
-                                cmd.Parameters.AddWithValue("@Anh", tenFileAnhDuocChon);
-                            }
-                            else
-                            {
-                                cmd.Parameters.AddWithValue("@Anh", DBNull.Value);
-                            }
+                            cmd.Parameters.Add("@Anh", SqlDbType.NVarChar, 255).Value =
+                                string.IsNullOrEmpty(tenFileAnhDuocChon) ? (object)DBNull.Value : tenFileAnhDuocChon;
 
                             conn.Open();
                             cmd.ExecuteNonQuery();
@@ -278,6 +251,7 @@ namespace AppCoffe.UserControls
                         {
                             picAnhMonAn.Image = Image.FromStream(fs);
                         }
+
                         tenFileAnhDuocChon = System.IO.Path.GetFileName(ofd.FileName);
                         string thuMucAnh = System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn");
 
@@ -285,6 +259,7 @@ namespace AppCoffe.UserControls
                         {
                             System.IO.Directory.CreateDirectory(thuMucAnh);
                         }
+
                         string duongDanDich = System.IO.Path.Combine(thuMucAnh, tenFileAnhDuocChon);
                         System.IO.File.Copy(ofd.FileName, duongDanDich, true);
                     }
@@ -330,13 +305,14 @@ namespace AppCoffe.UserControls
                         using (SqlCommand cmd = new SqlCommand(sqlUpdate, conn))
                         {
                             cmd.Parameters.AddWithValue("@TenMon", txtTenMon.Text.Trim());
-                            cmd.Parameters.AddWithValue("@Gia", Convert.ToDecimal(txtDonGia.Text.Trim()));
+                            cmd.Parameters.Add("@Gia", SqlDbType.Int).Value = Convert.ToInt32(txtDonGia.Text.Trim());
                             cmd.Parameters.AddWithValue("@MaMon", txtMaMon.Text.Trim());
-
-                            if (!string.IsNullOrEmpty(tenFileAnhDuocChon))
-                                cmd.Parameters.AddWithValue("@Anh", tenFileAnhDuocChon);
-                            else
-                                cmd.Parameters.AddWithValue("@Anh", dgvMenu.CurrentRow.Cells["Anh"].Value);
+                            object anhHienTai = dgvMenu.CurrentRow == null ? DBNull.Value : dgvMenu.CurrentRow.Cells["Anh"].Value;
+                            string tenAnhLuu = !string.IsNullOrEmpty(tenFileAnhDuocChon)
+                                ? tenFileAnhDuocChon
+                                : (anhHienTai == DBNull.Value ? "" : anhHienTai.ToString());
+                            cmd.Parameters.Add("@Anh", SqlDbType.NVarChar, 255).Value =
+                                string.IsNullOrEmpty(tenAnhLuu) ? (object)DBNull.Value : tenAnhLuu;
 
                             conn.Open();
                             cmd.ExecuteNonQuery();
@@ -406,6 +382,29 @@ namespace AppCoffe.UserControls
             if (formCong != null)
             {
                 formCong.Close();
+            }
+        }
+
+        private void HienThiAnhMon(string tenFileAnh)
+        {
+            if (string.IsNullOrEmpty(tenFileAnh))
+            {
+                picAnhMonAn.Image = null;
+                return;
+            }
+
+            string thuMucAnh = System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn");
+            string duongDanAnhDayDu = System.IO.Path.Combine(thuMucAnh, tenFileAnh);
+
+            if (!System.IO.File.Exists(duongDanAnhDayDu))
+            {
+                picAnhMonAn.Image = null;
+                return;
+            }
+
+            using (System.IO.FileStream fs = new System.IO.FileStream(duongDanAnhDayDu, System.IO.FileMode.Open, System.IO.FileAccess.Read))
+            {
+                picAnhMonAn.Image = Image.FromStream(fs);
             }
         }
     }
