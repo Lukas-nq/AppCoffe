@@ -21,5 +21,10 @@ namespace AppCoffe.UserControls
         private void ucGoiMon_Load(object sender, EventArgs e)
         {
         }
+
+        private void flpMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -382,5 +382,10 @@ namespace AppCoffe.UserControls
             public string CotTrangThaiHoaDon { get; set; }
             public string KieuDuLieuTrangThaiHoaDon { get; set; }
         }
+
+        private void dgvThongKe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

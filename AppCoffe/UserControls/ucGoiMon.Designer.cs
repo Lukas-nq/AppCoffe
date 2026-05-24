@@ -189,6 +189,7 @@
             this.flpMenu.Name = "flpMenu";
             this.flpMenu.Size = new System.Drawing.Size(589, 320);
             this.flpMenu.TabIndex = 3;
+            this.flpMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flpMenu_Paint);
             // 
             // pnlHoaDonBenPhai
             // 

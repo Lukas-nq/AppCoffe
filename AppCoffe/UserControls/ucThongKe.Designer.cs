@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.lblTimKiem = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -72,7 +71,7 @@
             this.lblTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTimKiem.Location = new System.Drawing.Point(13, 59);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(80, 20);
+            this.lblTimKiem.Size = new System.Drawing.Size(79, 20);
             this.lblTimKiem.TabIndex = 8;
             this.lblTimKiem.Text = "Tìm món:";
             // 
@@ -111,7 +110,7 @@
             this.lblSapXep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblSapXep.Location = new System.Drawing.Point(536, 59);
             this.lblSapXep.Name = "lblSapXep";
-            this.lblSapXep.Size = new System.Drawing.Size(81, 20);
+            this.lblSapXep.Size = new System.Drawing.Size(74, 20);
             this.lblSapXep.TabIndex = 5;
             this.lblSapXep.Text = "Sắp xếp:";
             // 
@@ -146,7 +145,7 @@
             this.lblDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDenNgay.Location = new System.Drawing.Point(276, 22);
             this.lblDenNgay.Name = "lblDenNgay";
-            this.lblDenNgay.Size = new System.Drawing.Size(83, 20);
+            this.lblDenNgay.Size = new System.Drawing.Size(79, 20);
             this.lblDenNgay.TabIndex = 2;
             this.lblDenNgay.Text = "Đến ngày";
             // 
@@ -166,7 +165,7 @@
             this.lblTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTuNgay.Location = new System.Drawing.Point(13, 22);
             this.lblTuNgay.Name = "lblTuNgay";
-            this.lblTuNgay.Size = new System.Drawing.Size(70, 20);
+            this.lblTuNgay.Size = new System.Drawing.Size(68, 20);
             this.lblTuNgay.TabIndex = 0;
             this.lblTuNgay.Text = "Từ ngày";
             // 
@@ -186,6 +185,7 @@
             this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThongKe.Size = new System.Drawing.Size(1050, 493);
             this.dgvThongKe.TabIndex = 1;
+            this.dgvThongKe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongKe_CellContentClick);
             this.dgvThongKe.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvThongKe_DataBindingComplete);
             // 
             // pnlBottom
@@ -223,6 +223,7 @@
             // 
             // ucThongKe
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvThongKe);
             this.Controls.Add(this.pnlBottom);
@@ -235,6 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();
             this.pnlBottom.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

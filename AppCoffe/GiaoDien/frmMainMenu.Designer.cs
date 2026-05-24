@@ -59,7 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btndangxuat.BackColor = System.Drawing.Color.Teal;
             this.btndangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndangxuat.ForeColor = System.Drawing.Color.Coral;
+            this.btndangxuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btndangxuat.Location = new System.Drawing.Point(23, 459);
             this.btndangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndangxuat.Name = "btndangxuat";
@@ -75,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThongke.BackColor = System.Drawing.Color.Teal;
             this.btnThongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongke.ForeColor = System.Drawing.Color.Coral;
+            this.btnThongke.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnThongke.Location = new System.Drawing.Point(23, 383);
             this.btnThongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongke.Name = "btnThongke";
@@ -83,6 +83,7 @@
             this.btnThongke.TabIndex = 4;
             this.btnThongke.Text = "Thống kê";
             this.btnThongke.UseVisualStyleBackColor = false;
+            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // btnMenu
             // 
@@ -90,7 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenu.BackColor = System.Drawing.Color.Teal;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.Coral;
+            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnMenu.Location = new System.Drawing.Point(23, 311);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenu.Name = "btnMenu";
@@ -98,6 +99,7 @@
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnKtraban
             // 
@@ -105,7 +107,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKtraban.BackColor = System.Drawing.Color.Teal;
             this.btnKtraban.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKtraban.ForeColor = System.Drawing.Color.Coral;
+            this.btnKtraban.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnKtraban.Location = new System.Drawing.Point(23, 233);
             this.btnKtraban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKtraban.Name = "btnKtraban";
@@ -121,7 +123,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GtnGoimon.BackColor = System.Drawing.Color.Teal;
             this.GtnGoimon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GtnGoimon.ForeColor = System.Drawing.Color.Coral;
+            this.GtnGoimon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.GtnGoimon.Location = new System.Drawing.Point(23, 161);
             this.GtnGoimon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GtnGoimon.Name = "GtnGoimon";
@@ -129,13 +131,14 @@
             this.GtnGoimon.TabIndex = 1;
             this.GtnGoimon.Text = "Gọi món";
             this.GtnGoimon.UseVisualStyleBackColor = false;
+            this.GtnGoimon.Click += new System.EventHandler(this.GtnGoimon_Click);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Tomato;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(0, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(772, 78);
@@ -150,12 +153,14 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1048, 625);
             this.Controls.Add(this.panelMenu);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
+            this.Click += new System.EventHandler(this.btnThongke_Click);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
