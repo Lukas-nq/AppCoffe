@@ -19,7 +19,10 @@ namespace AppCoffe.UserControls
         }
         private void ucGoiMon_Load(object sender, EventArgs e)
         {
-            LoadThucDon("SELECT * FROM MonAn");
+            this.BeginInvoke(new Action(() =>
+            {
+                LoadThucDon("SELECT * FROM MonAn");
+            }));
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {

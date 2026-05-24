@@ -41,8 +41,13 @@ namespace AppCoffe.UserControls
             try
             {
                 picAnhMon.Image = Image.FromFile(duongDanAnh);
+                picAnhMon.SizeMode = PictureBoxSizeMode.StretchImage; // Tiện tay ép ảnh vừa vặn với khung luôn
             }
-            catch { }
+            catch (System.Exception ex)
+            {
+                // Thêm chữ System. là nó hết báo lỗi đỏ ngay
+                MessageBox.Show("Món: " + ten + "\nĐang tìm tại: " + duongDanAnh + "\nLỗi thực tế: " + ex.Message);
+            }
         }
         private void usCardMonAn_Click(object sender, EventArgs e)
         {

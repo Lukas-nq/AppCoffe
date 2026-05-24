@@ -153,25 +153,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NewFolder1\banhkem.jpg">
+    <Content Include="HInhAnhMonAn\banhkem.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewFolder1\cf_den.jpg">
+    <Content Include="HInhAnhMonAn\cf_den.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewFolder1\cf_muoi.jpg">
+    <Content Include="HInhAnhMonAn\cf_muoi.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewFolder1\cf_sua.jpg">
+    <Content Include="HInhAnhMonAn\cf_sua.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewFolder1\tiramisu.jpg">
+    <Content Include="HInhAnhMonAn\tiramisu.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewFolder1\tra_camdao.jpg">
+    <Content Include="HInhAnhMonAn\tra_camdao.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewFolder1\tra_dau.jpg">
+    <Content Include="HInhAnhMonAn\tra_dau.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
