@@ -35,40 +35,41 @@ namespace AppCoffe.UserControls
         public void LoadThucDon(string cauLenhSQL)
         {
             flpMenu.Controls.Clear();
+            SqlConnection conn = DbContext.GetConnection();
+            SqlCommand cmd = new SqlCommand(cauLenhSQL, conn);
 
-            // ĐÃ SỬA: Thay thế new SqlConnection(chuoiKetNoi) thành hàm dùng chung của nhóm
-            using (SqlConnection conn = DbContext.GetConnection())
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(cauLenhSQL, conn))
+                conn.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
                 {
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataReader rd = cmd.ExecuteReader())
-                        {
-                            while (rd.Read())
-                            {
-                                usCardMonAn theMonAn = new usCardMonAn();
-                                string ten = rd["TenMon"].ToString();
-                                decimal gia = Convert.ToDecimal(rd["Gia"]);
+                    usCardMonAn theMonAn = new usCardMonAn();
+                    string ten = rd["TenMon"].ToString();
+                    decimal gia = Convert.ToDecimal(rd["Gia"]);
+                    string anh = "";
 
-                                // Bọc bùa hộ mệnh tránh lỗi sập phần mềm nếu trường ảnh trong DB bị NULL
-                                string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
-                                string anh = !string.IsNullOrEmpty(tenAnh)
-                                    ? System.IO.Path.Combine(Application.StartupPath, "Images", tenAnh)
-                                    : ""; // Nếu không có ảnh thì để chuỗi rỗng
-
-                                theMonAn.TruyenDuLieu(ten, gia, anh);
-                                theMonAn.TheBiBam += SuKien_Mo_Popup;
-                                flpMenu.Controls.Add(theMonAn);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
+                    if (rd["Anh"] != DBNull.Value) 
                     {
-                        MessageBox.Show("Lỗi load món: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        string tenAnh = rd["Anh"].ToString();
+                        anh = Application.StartupPath + "\\Images\\" + tenAnh;
                     }
-                    // ĐÃ TỐI ƯU: Sử dụng cấu trúc 'using' để C# tự động đóng kết nối (conn.Close) sạch sẽ, tránh kẹt RAM
+                    theMonAn.TruyenDuLieu(ten, gia, anh);
+                    theMonAn.TheBiBam += SuKien_Mo_Popup;
+                    flpMenu.Controls.Add(theMonAn);
+                }
+
+                rd.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi load món: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
                 }
             }
         }
@@ -115,9 +116,6 @@ namespace AppCoffe.UserControls
                         manHinh.Show();
                         manHinh.BringToFront();
                         break;
-                        manHinh.Show();
-                        manHinh.BringToFront();
-                        return;
                     }
                 }
                 formCha.Controls.Remove(this);
