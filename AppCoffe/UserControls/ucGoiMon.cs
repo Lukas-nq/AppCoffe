@@ -53,6 +53,12 @@ namespace AppCoffe.UserControls
                                 {
                                     anh = System.IO.Path.Combine(Application.StartupPath, "Images", "default.png");
                                 }
+
+                                string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
+                                string anh = !string.IsNullOrEmpty(tenAnh)
+                                    ? System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn", tenAnh)
+                                    : "";
+
                                 theMonAn.TruyenDuLieu(ten, gia, anh);
                                 theMonAn.TheBiBam += SuKien_Mo_Popup;
                                 flpMenu.Controls.Add(theMonAn);
