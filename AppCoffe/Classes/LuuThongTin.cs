@@ -16,15 +16,15 @@ namespace CoffeePOSLite.Classes
     public static class DbContext
     {
         // Chuỗi kết nối dùng chung cho database CoffeePOSLite.
-        private static readonly string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeePOSLite;Integrated Security=True";
+        private static readonly string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeePOSLite;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;";
         // chuỗi kết nối dùng riêng cho SQLEXPRESS01 vì máy t là SQLEXPRESS01
-        private static readonly string connectionStringLocal = @"Data Source=.\SQLEXPRESS01;Initial Catalog=CoffeePOSLite;Integrated Security=True;TrustServerCertificate=True;";
+        private static readonly string connectionStringLocal = @"Data Source=.\SQLEXPRESS01;Initial Catalog=CoffeePOSLite;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;";
 
         // Hàm mở kết nối an toàn cho cả nhóm gọi ra dùng
         public static SqlConnection GetConnection()
         {
             // // Kiểm tra nếu đúng là máy t, trả về chuỗi kết nối Local có số 01
-            if (Environment.MachineName.Equals("ADMIN-PC", StringComparison.OrdinalIgnoreCase))
+            if (Environment.MachineName.Equals("Admin-PC", StringComparison.OrdinalIgnoreCase))
             {
                return new SqlConnection(connectionStringLocal); // <-- Phải gọi biến này mới đúng ông ơi!
             }
@@ -36,15 +36,22 @@ namespace CoffeePOSLite.Classes
         public static DataTable GetDataTable(string sql)
         {
             DataTable dt = new DataTable();
-            using (SqlConnection conn = GetConnection())
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlConnection conn = GetConnection())
                 {
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
-                        da.Fill(dt);
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Lỗi cơ sở dữ liệu: " + ex.Message, "Lỗi kết nối", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
             return dt;
         }

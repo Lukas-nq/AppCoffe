@@ -36,6 +36,11 @@
             this.btnBan5 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.labelBan = new System.Windows.Forms.Label();
+            this.btnBan6 = new System.Windows.Forms.Button();
+            this.btnBan7 = new System.Windows.Forms.Button();
+            this.btnBan8 = new System.Windows.Forms.Button();
+            this.btnBan9 = new System.Windows.Forms.Button();
+            this.btnBan10 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +54,16 @@
             this.flowLayoutPanel1.Controls.Add(this.btnBan3);
             this.flowLayoutPanel1.Controls.Add(this.btnBan4);
             this.flowLayoutPanel1.Controls.Add(this.btnBan5);
+            this.flowLayoutPanel1.Controls.Add(this.btnBan6);
+            this.flowLayoutPanel1.Controls.Add(this.btnBan7);
+            this.flowLayoutPanel1.Controls.Add(this.btnBan8);
+            this.flowLayoutPanel1.Controls.Add(this.btnBan9);
+            this.flowLayoutPanel1.Controls.Add(this.btnBan10);
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Snow;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 162);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 110);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 468);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 695);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnBan1
@@ -142,10 +152,10 @@
             this.btnBack.BackColor = System.Drawing.Color.Teal;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBack.Location = new System.Drawing.Point(810, 530);
+            this.btnBack.Location = new System.Drawing.Point(799, 673);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(185, 100);
+            this.btnBack.Size = new System.Drawing.Size(185, 108);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Quay Lại";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -165,6 +175,86 @@
             this.labelBan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelBan.Click += new System.EventHandler(this.labelBan_Click);
             // 
+            // btnBan6
+            // 
+            this.btnBan6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBan6.BackColor = System.Drawing.Color.Green;
+            this.btnBan6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBan6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBan6.ForeColor = System.Drawing.Color.Snow;
+            this.btnBan6.Location = new System.Drawing.Point(485, 171);
+            this.btnBan6.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnBan6.Name = "btnBan6";
+            this.btnBan6.Size = new System.Drawing.Size(210, 135);
+            this.btnBan6.TabIndex = 6;
+            this.btnBan6.Text = "Bàn 06";
+            this.btnBan6.UseVisualStyleBackColor = false;
+            this.btnBan6.Click += new System.EventHandler(this.btnBan_Click);
+            // 
+            // btnBan7
+            // 
+            this.btnBan7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBan7.BackColor = System.Drawing.Color.Green;
+            this.btnBan7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBan7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBan7.ForeColor = System.Drawing.Color.Snow;
+            this.btnBan7.Location = new System.Drawing.Point(13, 330);
+            this.btnBan7.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnBan7.Name = "btnBan7";
+            this.btnBan7.Size = new System.Drawing.Size(210, 135);
+            this.btnBan7.TabIndex = 7;
+            this.btnBan7.Text = "Bàn 07";
+            this.btnBan7.UseVisualStyleBackColor = false;
+            this.btnBan7.Click += new System.EventHandler(this.btnBan_Click);
+            // 
+            // btnBan8
+            // 
+            this.btnBan8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBan8.BackColor = System.Drawing.Color.Green;
+            this.btnBan8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBan8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBan8.ForeColor = System.Drawing.Color.Snow;
+            this.btnBan8.Location = new System.Drawing.Point(249, 330);
+            this.btnBan8.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnBan8.Name = "btnBan8";
+            this.btnBan8.Size = new System.Drawing.Size(210, 135);
+            this.btnBan8.TabIndex = 8;
+            this.btnBan8.Text = "Bàn 08";
+            this.btnBan8.UseVisualStyleBackColor = false;
+            this.btnBan8.Click += new System.EventHandler(this.btnBan_Click);
+            // 
+            // btnBan9
+            // 
+            this.btnBan9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBan9.BackColor = System.Drawing.Color.Green;
+            this.btnBan9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBan9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBan9.ForeColor = System.Drawing.Color.Snow;
+            this.btnBan9.Location = new System.Drawing.Point(485, 330);
+            this.btnBan9.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnBan9.Name = "btnBan9";
+            this.btnBan9.Size = new System.Drawing.Size(210, 135);
+            this.btnBan9.TabIndex = 9;
+            this.btnBan9.Text = "Bàn 09";
+            this.btnBan9.UseVisualStyleBackColor = false;
+            this.btnBan9.Click += new System.EventHandler(this.btnBan_Click);
+            // 
+            // btnBan10
+            // 
+            this.btnBan10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBan10.BackColor = System.Drawing.Color.Green;
+            this.btnBan10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBan10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBan10.ForeColor = System.Drawing.Color.Snow;
+            this.btnBan10.Location = new System.Drawing.Point(13, 489);
+            this.btnBan10.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnBan10.Name = "btnBan10";
+            this.btnBan10.Size = new System.Drawing.Size(210, 135);
+            this.btnBan10.TabIndex = 10;
+            this.btnBan10.Text = "Bàn 10";
+            this.btnBan10.UseVisualStyleBackColor = false;
+            this.btnBan10.Click += new System.EventHandler(this.btnBan_Click);
+            // 
             // ucSoDoBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,7 +265,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucSoDoBan";
-            this.Size = new System.Drawing.Size(1043, 767);
+            this.Size = new System.Drawing.Size(1043, 819);
             this.Load += new System.EventHandler(this.ucSoDoBan_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -192,5 +282,10 @@
         private System.Windows.Forms.Button btnBan5;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label labelBan;
+        private System.Windows.Forms.Button btnBan6;
+        private System.Windows.Forms.Button btnBan7;
+        private System.Windows.Forms.Button btnBan8;
+        private System.Windows.Forms.Button btnBan9;
+        private System.Windows.Forms.Button btnBan10;
     }
 }

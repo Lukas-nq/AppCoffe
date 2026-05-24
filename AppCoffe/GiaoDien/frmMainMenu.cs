@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -74,6 +75,20 @@ namespace AppCoffe.GiaoDien
 
         private void GtnGoimon_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (SqlConnection conn = CoffeePOSLite.Classes.DbContext.GetConnection())
+                {
+                    conn.Open(); // Thử kết nối thử xuống SQL xem thông suốt chưa
+                }
+            }
+            catch (Exception)
+            {
+                // Nếu sập kết nối thì chặn luôn, không cho mở Form rỗng gây xấu giao diện
+                MessageBox.Show("Không thể kết nối đến máy chủ cơ sở dữ liệu. Vui lòng kiểm tra lại SQL Server!", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             using (Form formGoiMon = new Form())
             {
                 formGoiMon.Text = "HỆ THỐNG PHỤC VỤ KHÁCH HÀNG - GỌI MÓN";

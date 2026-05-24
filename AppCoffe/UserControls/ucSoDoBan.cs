@@ -60,11 +60,13 @@ namespace AppCoffe.UserControls
                 using (SqlConnection conn = DbContext.GetConnection())
                 {
                     string sql = "UPDATE Ban SET TrangThai = @status WHERE TenBan = @name";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@status", trangThai);
-                    cmd.Parameters.AddWithValue("@name", tenBan);
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@status", trangThai);
+                        cmd.Parameters.AddWithValue("@name", tenBan);
+                        conn.Open();
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
                 }
             }
             catch (Exception ex)
@@ -92,14 +94,15 @@ namespace AppCoffe.UserControls
         {
             try
             {
-                Button[] buttons = { btnBan1, btnBan2, btnBan3, btnBan4, btnBan5 };
+                Button[] buttons = { btnBan1, btnBan2, btnBan3, btnBan4, btnBan5,
+                             btnBan6, btnBan7, btnBan8, btnBan9, btnBan10 };
                 foreach (Button button in buttons)
                 {
-                    button.Visible = false;
+                    if(button !=null) button.Visible = false;
                 }
 
                 using (SqlConnection conn = DbContext.GetConnection())
-                using (SqlCommand cmd = new SqlCommand("SELECT TOP 5 TenBan, TrangThai FROM Ban ORDER BY MaBan", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT TenBan, TrangThai FROM Ban ORDER BY MaBan ASC", conn))
                 {
                     conn.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -108,9 +111,16 @@ namespace AppCoffe.UserControls
                         while (reader.Read() && index < buttons.Length)
                         {
                             Button button = buttons[index];
-                            button.Text = reader["TenBan"].ToString();
-                            button.BackColor = Convert.ToInt32(reader["TrangThai"]) == 1 ? Color.Red : Color.Green;
-                            button.Visible = true;
+                            if (button != null)
+                            {
+                                button.Text = reader["TenBan"].ToString(); // Hiển thị "Bàn 1", "Bàn 2"...
+
+                                // Đọc trạng thái từ SQL để gán màu chuẩn xác
+                                int trangThai = Convert.ToInt32(reader["TrangThai"]);
+                                button.BackColor = (trangThai == 1) ? Color.Red : Color.Green;
+
+                                button.Visible = true;
+                            }
                             index++;
                         }
                     }
