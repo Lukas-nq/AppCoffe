@@ -51,7 +51,7 @@ namespace AppCoffe.UserControls
 
                                 string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
                                 string anh = !string.IsNullOrEmpty(tenAnh)
-                                    ? System.IO.Path.Combine(Application.StartupPath, "Images", tenAnh)
+                                    ? System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn", tenAnh)
                                     : "";
 
                                 theMonAn.TruyenDuLieu(ten, gia, anh);
