@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -104,7 +104,6 @@ namespace AppCoffe.UserControls
             }
             lblTongTien.Text = tong.ToString("#,##0") + " VNĐ";
         }
-
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             Form formCong = this.FindForm();
