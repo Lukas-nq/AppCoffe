@@ -123,5 +123,7 @@ namespace AppCoffe.GiaoDien
                 formGoiMon.ShowDialog(this);
             }
         }
+
+        
     }
 }
