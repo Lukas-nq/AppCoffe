@@ -48,6 +48,16 @@ namespace AppCoffe.UserControls
                                 usCardMonAn theMonAn = new usCardMonAn();
                                 string ten = rd["TenMon"].ToString();
                                 decimal gia = Convert.ToDecimal(rd["Gia"]);
+                                string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
+                                string anh;
+                                if (!string.IsNullOrEmpty(tenAnh))
+                                {
+                                    anh = System.IO.Path.Combine(Application.StartupPath, "Images", tenAnh);
+                                }
+                                else
+                                {
+                                    anh = System.IO.Path.Combine(Application.StartupPath, "Images", "default.png");
+                                }
 
                                 string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
                                 string anh = !string.IsNullOrEmpty(tenAnh)
