@@ -15,6 +15,13 @@ namespace AppCoffe.UserControls
         public event EventHandler TheBiBam;
         public string tenMonLuu;
         public decimal giaMonLuu;
+        public string anhMonLuu;
+     
+        public Image AnhHinh
+        {
+            get { return picAnhMon.Image; }
+            set { picAnhMon.Image = value; }
+        }
         public usCardMonAn()
         {
             InitializeComponent();
@@ -27,6 +34,7 @@ namespace AppCoffe.UserControls
         {
             tenMonLuu = ten;
             giaMonLuu = gia;
+            anhMonLuu = duongDanAnh;
 
             lblTenMon.Text = ten;
             lblGiaMon.Text = gia.ToString("#,##0") + " VNĐ";

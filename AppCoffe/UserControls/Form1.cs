@@ -16,6 +16,7 @@ namespace AppCoffe.UserControls
         public decimal giaMonNhan;
         public int soLuongChot;
         public string ghiChuChot;
+        public string duongDanAnhNhan;
 
         public frmPopupTreo()
         {
@@ -26,8 +27,12 @@ namespace AppCoffe.UserControls
         {
             lblMon.Text = tenMonNhan;
             lblGia.Text = giaMonNhan.ToString("#,##0") + " VNĐ";
+            if (!string.IsNullOrEmpty(duongDanAnhNhan) && System.IO.File.Exists(duongDanAnhNhan))
+            {
+                picAnhMon.Image = Image.FromFile(duongDanAnhNhan);
+                picAnhMon.SizeMode = PictureBoxSizeMode.StretchImage; 
+            }
 
-            // Kiểm tra an toàn giá trị mặc định cho ô số lượng ban đầu
             if (numSoLuong.Value <= 0)
             {
                 numSoLuong.Value = 1;

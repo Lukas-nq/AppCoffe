@@ -70,6 +70,7 @@ namespace AppCoffe.UserControls
                 popup.tenMonNhan = theVuaBam.tenMonLuu;
                 popup.giaMonNhan = theVuaBam.giaMonLuu;
                 popup.StartPosition = FormStartPosition.CenterParent;
+                popup.duongDanAnhNhan = theVuaBam.anhMonLuu;
                 if (popup.ShowDialog() == DialogResult.OK)
                 {
                     int soLuong = popup.soLuongChot;
