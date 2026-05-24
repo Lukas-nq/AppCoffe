@@ -33,19 +33,7 @@ namespace AppCoffe.UserControls
         public void LoadThucDon(string cauLenhSQL)
         {
             flpMenu.Controls.Clear();
-            SqlConnection conn = DbContext.GetConnection();
-            SqlCommand cmd = new SqlCommand(cauLenhSQL, conn);
 
-            try
-            {
-                conn.Open();
-                SqlDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
-                {
-                    usCardMonAn theMonAn = new usCardMonAn();
-                    string ten = rd["TenMon"].ToString();
-                    decimal gia = Convert.ToDecimal(rd["Gia"]);
-                    string anh = "";
             using (SqlConnection conn = DbContext.GetConnection())
             {
                 using (SqlCommand cmd = new SqlCommand(cauLenhSQL, conn))
@@ -61,30 +49,9 @@ namespace AppCoffe.UserControls
                                 string ten = rd["TenMon"].ToString();
                                 decimal gia = Convert.ToDecimal(rd["Gia"]);
 
-                    if (rd["Anh"] != DBNull.Value) 
-                    {
-                        string tenAnh = rd["Anh"].ToString();
-                        anh = Application.StartupPath + "\\Images\\" + tenAnh;
-                    }
-                    theMonAn.TruyenDuLieu(ten, gia, anh);
-                    theMonAn.TheBiBam += SuKien_Mo_Popup;
-                    flpMenu.Controls.Add(theMonAn);
-                }
-
-                rd.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi load món: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (conn.State == System.Data.ConnectionState.Open)
-                {
-                    conn.Close();
                                 string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
                                 string anh = !string.IsNullOrEmpty(tenAnh)
-                                    ? System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn", tenAnh)
+                                    ? System.IO.Path.Combine(Application.StartupPath, "Images", tenAnh)
                                     : "";
 
                                 theMonAn.TruyenDuLieu(ten, gia, anh);
@@ -137,25 +104,9 @@ namespace AppCoffe.UserControls
             }
             lblTongTien.Text = tong.ToString("#,##0") + " VNĐ";
         }
+
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            Control formCha = this.Parent;
-
-            if (formCha != null)
-            { 
-                foreach (Control manHinh in formCha.Controls)
-                {
-                    if (manHinh is ucQuanLyMenu)
-                    {
-                        manHinh.Show();
-                        manHinh.BringToFront();
-                        break;
-                    }
-                }
-                formCha.Controls.Remove(this);
-                this.Dispose();               
-            
-        }
             Form formCong = this.FindForm();
             if (formCong != null)
             {
