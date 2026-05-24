@@ -35,6 +35,7 @@
             this.btnBan4 = new System.Windows.Forms.Button();
             this.btnBan5 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.labelBan = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,10 +50,10 @@
             this.flowLayoutPanel1.Controls.Add(this.btnBan4);
             this.flowLayoutPanel1.Controls.Add(this.btnBan5);
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Snow;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 162);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 492);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 468);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnBan1
@@ -141,7 +142,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Teal;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBack.Location = new System.Drawing.Point(823, 414);
+            this.btnBack.Location = new System.Drawing.Point(810, 530);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(185, 100);
@@ -150,16 +151,31 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // labelBan
+            // 
+            this.labelBan.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.labelBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelBan.Location = new System.Drawing.Point(0, 0);
+            this.labelBan.Name = "labelBan";
+            this.labelBan.Size = new System.Drawing.Size(1043, 90);
+            this.labelBan.TabIndex = 2;
+            this.labelBan.Text = "SƠ ĐỒ BÀN";
+            this.labelBan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelBan.Click += new System.EventHandler(this.labelBan_Click);
+            // 
             // ucSoDoBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1043, 606);
+            this.Controls.Add(this.labelBan);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucSoDoBan";
+            this.Size = new System.Drawing.Size(1043, 767);
             this.Load += new System.EventHandler(this.ucSoDoBan_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -175,5 +191,6 @@
         private System.Windows.Forms.Button btnBan4;
         private System.Windows.Forms.Button btnBan5;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label labelBan;
     }
 }

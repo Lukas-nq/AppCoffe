@@ -30,8 +30,17 @@ namespace AppCoffe.GiaoDien
 
         private void btnKtraban_Click(object sender, EventArgs e)
         {
-            ucSoDoBan sodo = new ucSoDoBan();
-            sodo.ShowDialog();
+            using(Form formSoDo = new Form())
+            {
+                formSoDo.FormBorderStyle = FormBorderStyle.None;
+                formSoDo.Size = new Size(850, 600);
+                formSoDo.StartPosition = FormStartPosition.CenterParent;
+                ucSoDoBan sodo = new ucSoDoBan();
+                sodo.Dock = DockStyle.Fill;
+                formSoDo.Controls.Add(sodo);
+                formSoDo.ShowDialog(this);
+            }
+
         }
 
         private void btndangxuat_Click(object sender, EventArgs e)

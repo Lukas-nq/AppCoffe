@@ -12,7 +12,7 @@ using CoffeePOSLite.Classes;
 
 namespace AppCoffe.UserControls
 {
-    public partial class ucSoDoBan : Form 
+    public partial class ucSoDoBan : UserControl
     {
         public ucSoDoBan()
         {
@@ -76,7 +76,11 @@ namespace AppCoffe.UserControls
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form formHienTai = this.FindForm();
+            if (formHienTai != null)
+            {
+                formHienTai.Close(); // Tự động đóng Form popup bọc ngoài
+            }
         }
 
         private void ucSoDoBan_Load(object sender, EventArgs e)
@@ -116,6 +120,11 @@ namespace AppCoffe.UserControls
             {
                 MessageBox.Show("Lỗi tải sơ đồ bàn: " + ex.Message);
             }
+        }
+
+        private void labelBan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
