@@ -83,7 +83,9 @@
             // 
             this.lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTieuDe.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblTieuDe.Location = new System.Drawing.Point(230, 9);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(342, 29);
@@ -93,7 +95,9 @@
             // lblMon
             // 
             this.lblMon.AutoSize = true;
+            this.lblMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMon.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblMon.Location = new System.Drawing.Point(438, 61);
             this.lblMon.Name = "lblMon";
             this.lblMon.Size = new System.Drawing.Size(66, 22);
@@ -103,7 +107,9 @@
             // lblGia
             // 
             this.lblGia.AutoSize = true;
+            this.lblGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblGia.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblGia.Location = new System.Drawing.Point(438, 114);
             this.lblGia.Name = "lblGia";
             this.lblGia.Size = new System.Drawing.Size(49, 22);
@@ -113,7 +119,9 @@
             // lblSoLuong
             // 
             this.lblSoLuong.AutoSize = true;
+            this.lblSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblSoLuong.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblSoLuong.Location = new System.Drawing.Point(438, 166);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(119, 22);
@@ -123,7 +131,9 @@
             // lblGhiChu
             // 
             this.lblGhiChu.AutoSize = true;
+            this.lblGhiChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblGhiChu.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblGhiChu.Location = new System.Drawing.Point(55, 232);
             this.lblGhiChu.Name = "lblGhiChu";
             this.lblGhiChu.Size = new System.Drawing.Size(101, 25);
@@ -133,6 +143,7 @@
             // btnHuy
             // 
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnHuy.Location = new System.Drawing.Point(169, 389);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(174, 57);
@@ -144,6 +155,7 @@
             // btnXacNhan
             // 
             this.btnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXacNhan.Location = new System.Drawing.Point(440, 389);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(174, 57);
@@ -156,6 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(772, 475);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.btnHuy);
@@ -167,6 +180,7 @@
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.numSoLuong);
             this.Controls.Add(this.picAnhMon);
+            this.ForeColor = System.Drawing.Color.Fuchsia;
             this.MinimizeBox = false;
             this.Name = "frmPopupTreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

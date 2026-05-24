@@ -50,6 +50,7 @@
             this.lblTenMon.AutoSize = true;
             this.lblTenMon.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenMon.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblTenMon.Location = new System.Drawing.Point(0, 111);
             this.lblTenMon.Name = "lblTenMon";
             this.lblTenMon.Size = new System.Drawing.Size(81, 20);
@@ -64,6 +65,7 @@
             this.lblGiaMon.AutoSize = true;
             this.lblGiaMon.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblGiaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblGiaMon.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblGiaMon.Location = new System.Drawing.Point(0, 191);
             this.lblGiaMon.Name = "lblGiaMon";
             this.lblGiaMon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
