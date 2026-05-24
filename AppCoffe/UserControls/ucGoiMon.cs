@@ -53,6 +53,33 @@ namespace AppCoffe.UserControls
                                 {
                                     anh = System.IO.Path.Combine(Application.StartupPath, "Images", "default.png");
                                 }
+
+                    if (rd["Anh"] != DBNull.Value) 
+                    {
+                        string tenAnh = rd["Anh"].ToString();
+                        anh = Application.StartupPath + "\\Images\\" + tenAnh;
+                    }
+                    theMonAn.TruyenDuLieu(ten, gia, anh);
+                    theMonAn.TheBiBam += SuKien_Mo_Popup;
+                    flpMenu.Controls.Add(theMonAn);
+                }
+
+                rd.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi load món: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                                string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
+                                string anh = !string.IsNullOrEmpty(tenAnh)
+                                    ? System.IO.Path.Combine(Application.StartupPath, "HinhAnhMonAn", tenAnh)
+                                    : "";
+
                                 theMonAn.TruyenDuLieu(ten, gia, anh);
                                 theMonAn.TheBiBam += SuKien_Mo_Popup;
                                 flpMenu.Controls.Add(theMonAn);
