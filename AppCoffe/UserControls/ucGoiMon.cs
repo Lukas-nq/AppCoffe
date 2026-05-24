@@ -91,22 +91,25 @@ namespace AppCoffe.UserControls
             }
             lblTongTien.Text = tong.ToString("#,##0") + " VNĐ";
         }
-
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            if (this.Parent != null)
-            {
-                foreach (Control manHinh in this.Parent.Controls)
+            Control formCha = this.Parent;
+
+            if (formCha != null)
+            { 
+                foreach (Control manHinh in formCha.Controls)
                 {
                     if (manHinh is ucQuanLyMenu)
                     {
-                        manHinh.Show();           
-                        manHinh.BringToFront();   
-                        return;                     
+                        manHinh.Show();
+                        manHinh.BringToFront();
+                        break;
                     }
                 }
-            }
+                formCha.Controls.Remove(this);
+                this.Dispose();               
+            
+        }
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
