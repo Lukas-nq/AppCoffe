@@ -28,143 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnBan1 = new System.Windows.Forms.Button();
-            this.btnBan2 = new System.Windows.Forms.Button();
-            this.btnBan3 = new System.Windows.Forms.Button();
-            this.btnBan4 = new System.Windows.Forms.Button();
-            this.btnBan5 = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.txtdangnhap = new System.Windows.Forms.TextBox();
+            this.btnXacnhan = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtmatkhau = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // txtdangnhap
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.btnBan1);
-            this.flowLayoutPanel1.Controls.Add(this.btnBan2);
-            this.flowLayoutPanel1.Controls.Add(this.btnBan3);
-            this.flowLayoutPanel1.Controls.Add(this.btnBan4);
-            this.flowLayoutPanel1.Controls.Add(this.btnBan5);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(64, 75);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 492);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.txtdangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdangnhap.Location = new System.Drawing.Point(483, 240);
+            this.txtdangnhap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdangnhap.Name = "txtdangnhap";
+            this.txtdangnhap.Size = new System.Drawing.Size(265, 22);
+            this.txtdangnhap.TabIndex = 2;
             // 
-            // btnBan1
+            // btnXacnhan
             // 
-            this.btnBan1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBan1.BackColor = System.Drawing.Color.Green;
-            this.btnBan1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBan1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan1.ForeColor = System.Drawing.Color.White;
-            this.btnBan1.Location = new System.Drawing.Point(13, 12);
-            this.btnBan1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.btnBan1.Name = "btnBan1";
-            this.btnBan1.Size = new System.Drawing.Size(147, 135);
-            this.btnBan1.TabIndex = 1;
-            this.btnBan1.Text = "Bàn 01";
-            this.btnBan1.UseVisualStyleBackColor = false;
+            this.btnXacnhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXacnhan.BackColor = System.Drawing.Color.Teal;
+            this.btnXacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacnhan.ForeColor = System.Drawing.Color.Tomato;
+            this.btnXacnhan.Location = new System.Drawing.Point(749, 521);
+            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(271, 103);
+            this.btnXacnhan.TabIndex = 8;
+            this.btnXacnhan.Text = "xác nhận đăng nhập";
+            this.btnXacnhan.UseVisualStyleBackColor = false;
             // 
-            // btnBan2
+            // panel2
             // 
-            this.btnBan2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBan2.BackColor = System.Drawing.Color.Green;
-            this.btnBan2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBan2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan2.ForeColor = System.Drawing.Color.White;
-            this.btnBan2.Location = new System.Drawing.Point(186, 12);
-            this.btnBan2.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.btnBan2.Name = "btnBan2";
-            this.btnBan2.Size = new System.Drawing.Size(147, 135);
-            this.btnBan2.TabIndex = 2;
-            this.btnBan2.Text = "Bàn 02";
-            this.btnBan2.UseVisualStyleBackColor = false;
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtmatkhau);
+            this.panel2.Controls.Add(this.txtdangnhap);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(113, 19);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(907, 441);
+            this.panel2.TabIndex = 7;
             // 
-            // btnBan3
+            // label1
             // 
-            this.btnBan3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBan3.BackColor = System.Drawing.Color.Green;
-            this.btnBan3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBan3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan3.ForeColor = System.Drawing.Color.White;
-            this.btnBan3.Location = new System.Drawing.Point(359, 12);
-            this.btnBan3.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.btnBan3.Name = "btnBan3";
-            this.btnBan3.Size = new System.Drawing.Size(147, 135);
-            this.btnBan3.TabIndex = 3;
-            this.btnBan3.Text = "Bàn 03";
-            this.btnBan3.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(286, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(357, 76);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đăng nhập";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBan4
+            // txtmatkhau
             // 
-            this.btnBan4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBan4.BackColor = System.Drawing.Color.Green;
-            this.btnBan4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBan4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan4.ForeColor = System.Drawing.Color.White;
-            this.btnBan4.Location = new System.Drawing.Point(532, 12);
-            this.btnBan4.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.btnBan4.Name = "btnBan4";
-            this.btnBan4.Size = new System.Drawing.Size(147, 135);
-            this.btnBan4.TabIndex = 4;
-            this.btnBan4.Text = "Bàn 04";
-            this.btnBan4.UseVisualStyleBackColor = false;
+            this.txtmatkhau.Location = new System.Drawing.Point(483, 338);
+            this.txtmatkhau.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmatkhau.Name = "txtmatkhau";
+            this.txtmatkhau.PasswordChar = '*';
+            this.txtmatkhau.Size = new System.Drawing.Size(265, 22);
+            this.txtmatkhau.TabIndex = 3;
             // 
-            // btnBan5
+            // label2
             // 
-            this.btnBan5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBan5.BackColor = System.Drawing.Color.Green;
-            this.btnBan5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBan5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan5.ForeColor = System.Drawing.Color.White;
-            this.btnBan5.Location = new System.Drawing.Point(13, 171);
-            this.btnBan5.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.btnBan5.Name = "btnBan5";
-            this.btnBan5.Size = new System.Drawing.Size(147, 135);
-            this.btnBan5.TabIndex = 5;
-            this.btnBan5.Text = "Bàn 05";
-            this.btnBan5.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tomato;
+            this.label2.Location = new System.Drawing.Point(203, 225);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 39);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "tên đăng nhập";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // btnBack
+            // label3
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(883, 485);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(185, 82);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Quay Lại";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Tomato;
+            this.label3.Location = new System.Drawing.Point(237, 322);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 39);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "mật khẩu";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // TestChucNang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1132, 642);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnXacnhan);
+            this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TestChucNang";
             this.Text = "TestChucNang";
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnBan1;
-        private System.Windows.Forms.Button btnBan2;
-        private System.Windows.Forms.Button btnBan3;
-        private System.Windows.Forms.Button btnBan4;
-        private System.Windows.Forms.Button btnBan5;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox txtdangnhap;
+        private System.Windows.Forms.Button btnXacnhan;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtmatkhau;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
