@@ -28,40 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucQuanLyMenu1 = new AppCoffe.UserControls.ucQuanLyMenu();
+            this.txtdangnhap = new System.Windows.Forms.TextBox();
+            this.btnXacnhan = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtmatkhau = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
-            // ucQuanLyMenu1
+            // txtdangnhap
             // 
-            this.ucQuanLyMenu1.Location = new System.Drawing.Point(30, 50);
-            this.ucQuanLyMenu1.Name = "ucQuanLyMenu1";
-            this.ucQuanLyMenu1.Size = new System.Drawing.Size(879, 529);
-            this.ucQuanLyMenu1.TabIndex = 0;
+            this.txtdangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdangnhap.Location = new System.Drawing.Point(483, 240);
+            this.txtdangnhap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdangnhap.Name = "txtdangnhap";
+            this.txtdangnhap.Size = new System.Drawing.Size(265, 22);
+            this.txtdangnhap.TabIndex = 2;
             // 
-=======
->>>>>>> c025e223932a20aa4ec8df41dbf595ef4aaa3a8d
+            // btnXacnhan
+            // 
+            this.btnXacnhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXacnhan.BackColor = System.Drawing.Color.Teal;
+            this.btnXacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacnhan.ForeColor = System.Drawing.Color.Tomato;
+            this.btnXacnhan.Location = new System.Drawing.Point(749, 521);
+            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(271, 103);
+            this.btnXacnhan.TabIndex = 8;
+            this.btnXacnhan.Text = "xác nhận đăng nhập";
+            this.btnXacnhan.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtmatkhau);
+            this.panel2.Controls.Add(this.txtdangnhap);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(113, 19);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(907, 441);
+            this.panel2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(286, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(357, 76);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đăng nhập";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtmatkhau
+            // 
+            this.txtmatkhau.Location = new System.Drawing.Point(483, 338);
+            this.txtmatkhau.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmatkhau.Name = "txtmatkhau";
+            this.txtmatkhau.PasswordChar = '*';
+            this.txtmatkhau.Size = new System.Drawing.Size(265, 22);
+            this.txtmatkhau.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tomato;
+            this.label2.Location = new System.Drawing.Point(203, 225);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 39);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "tên đăng nhập";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Tomato;
+            this.label3.Location = new System.Drawing.Point(237, 322);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 39);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "mật khẩu";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // TestChucNang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1132, 785);
-            this.ClientSize = new System.Drawing.Size(849, 470);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Controls.Add(this.ucQuanLyMenu1);
-=======
-            this.ClientSize = new System.Drawing.Size(849, 470);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> c025e223932a20aa4ec8df41dbf595ef4aaa3a8d
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(1132, 642);
+            this.Controls.Add(this.btnXacnhan);
+            this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TestChucNang";
             this.Text = "TestChucNang";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UserControls.ucQuanLyMenu ucQuanLyMenu1;
+        private System.Windows.Forms.TextBox txtdangnhap;
+        private System.Windows.Forms.Button btnXacnhan;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtmatkhau;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

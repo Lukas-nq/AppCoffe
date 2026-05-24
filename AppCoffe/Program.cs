@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppCoffe.GiaoDien;
 
 namespace AppCoffe
 {
@@ -16,7 +17,7 @@ namespace AppCoffe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestChucNang());
+            Application.Run(new frmLogin());
         }
     }
 }

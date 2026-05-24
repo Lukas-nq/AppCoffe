@@ -15,13 +15,20 @@ namespace CoffeePOSLite.Classes
     // 2. CLASS KẾT NỐI DỮ LIỆU CHUNG (DATABASE CONTEXT)
     public static class DbContext
     {
-        // Chuỗi kết nối dùng chung (chỉnh Initial Catalog phù hợp với database hiện có trên server của bạn)
-        // Trên máy của bạn database đang tên 'QuanLyCafe' (xem trong SSMS), nên đặt tên đó ở Initial Catalog
-        private static readonly string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyCafe;Integrated Security=True";
+        // Chuỗi kết nối dùng chung cho database CoffeePOSLite.
+        private static readonly string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeePOSLite;Integrated Security=True";
+        // chuỗi kết nối dùng riêng cho SQLEXPRESS01 vì máy t là SQLEXPRESS01
+        private static readonly string connectionStringLocal = @"Data Source=.\SQLEXPRESS01;Initial Catalog=CoffeePOSLite;Integrated Security=True;TrustServerCertificate=True;";
 
         // Hàm mở kết nối an toàn cho cả nhóm gọi ra dùng
         public static SqlConnection GetConnection()
         {
+            // // Kiểm tra nếu đúng là máy t, trả về chuỗi kết nối Local có số 01
+            if (Environment.MachineName.Equals("ADMIN-PC", StringComparison.OrdinalIgnoreCase))
+            {
+               return new SqlConnection(connectionStringLocal); // <-- Phải gọi biến này mới đúng ông ơi!
+            }
+            // máy cm vẫn tự động ăn vào chuỗi này
             return new SqlConnection(connectionString);
         }
 

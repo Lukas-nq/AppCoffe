@@ -14,9 +14,12 @@ namespace AppCoffe.UserControls
 {
     public partial class ucQuanLyMenu : UserControl
     {
+        private string quyenNguoiDung = "";
+
         private string tenFileAnhDuocChon = "";
-        public ucQuanLyMenu()
+        public ucQuanLyMenu(string role)
         {
+            this.quyenNguoiDung = role;
             InitializeComponent();
         }
         private void TaiDanhSachMenu()
@@ -75,6 +78,14 @@ namespace AppCoffe.UserControls
             TaiDanhSachMenu();
 
             TrangThaiBanDau();
+            if (!string.Equals(quyenNguoiDung, "Admin", StringComparison.OrdinalIgnoreCase))
+            {
+
+                btnThem.Visible = false;
+                btnSua.Visible = false;
+                btnXoa.Visible = false;
+                btnChonAnh.Visible = false; // Nhân viên không được đổi ảnh món
+            }
 
         }
 
@@ -82,12 +93,15 @@ namespace AppCoffe.UserControls
         {
             if (e.RowIndex >= 0)
             {
-                btnThem.Text = "Thêm";
-                btnSua.Text = "Sửa";
-                btnXoa.Text = "Xóa";
-                btnThem.Enabled = true;
-                btnSua.Enabled = true;
-                btnXoa.Enabled = true;
+                if (string.Equals(quyenNguoiDung, "Admin", StringComparison.OrdinalIgnoreCase))
+                {
+                    btnThem.Text = "Thêm";
+                    btnSua.Text = "Sửa";
+                    btnXoa.Text = "Xóa";
+                    btnThem.Enabled = true;
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                }
 
                 DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
 
@@ -144,7 +158,6 @@ namespace AppCoffe.UserControls
             TaiDanhSachMenu();
         }
 
-<<<<<<< HEAD
         private bool KiemTraMaLoaiHopLe(string maLoai)
         {
             string sql = "SELECT COUNT(*) FROM [DanhMuc] WHERE MaLoai = @MaLoai";
@@ -153,7 +166,7 @@ namespace AppCoffe.UserControls
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@MaLoai", maLoai.Trim());
                 conn.Open();
-                return Convert.ToInt32(cmd.ExecuteScalar()) > 0; // Trả về true nếu tìm thấy mã loại hợp lệ
+                return Convert.ToInt32(cmd.ExecuteScalar()) > 0; 
             }
         }
         private void TrangThaiBanDau()
@@ -386,17 +399,14 @@ namespace AppCoffe.UserControls
             }
         }
 
-        
-=======
-        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnQuayLai_Click(object sender, EventArgs e)
         {
+            Form formCong = this.FindForm();
 
-        }
->>>>>>> c025e223932a20aa4ec8df41dbf595ef4aaa3a8d
-
-        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (formCong != null)
+            {
+                formCong.Close();
+            }
         }
     }
 }
