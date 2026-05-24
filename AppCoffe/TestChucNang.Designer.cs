@@ -135,6 +135,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TestChucNang";
             this.Text = "TestChucNang";
+            this.Load += new System.EventHandler(this.TestChucNang_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

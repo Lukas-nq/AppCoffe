@@ -17,5 +17,9 @@ namespace AppCoffe
             InitializeComponent();
         }
 
+        private void TestChucNang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

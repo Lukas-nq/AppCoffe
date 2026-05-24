@@ -25,14 +25,15 @@ namespace CoffeePOSLite.Classes
         {
             string currentMachineName = Environment.MachineName.ToUpper();
             // // Kiểm tra nếu đúng là máy t, trả về chuỗi kết nối Local có số 01
-            if (Environment.MachineName.Equals("Admin-PC", StringComparison.OrdinalIgnoreCase))
+            if (currentMachineName == "ADMIN-PC")
             {
                 return new SqlConnection(connectionStringLocal);
             }
 
-            // Còn lại tất cả các máy khác trong nhóm hoặc máy thầy cô giáo sẽ ăn vào SQLEXPRESS mặc định
+            // Nếu không phải máy ADMIN-PC, mặc định dùng SQLEXPRESS
             return new SqlConnection(connectionStringGroup);
         }
+
 
         // Hàm mẫu để chạy nhanh câu lệnh truy vấn lấy bảng dữ liệu (Dùng cho DataGridView)
         public static DataTable GetDataTable(string sql)
