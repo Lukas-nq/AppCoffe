@@ -44,23 +44,23 @@
             // 
             // picAnhMon
             // 
-            this.picAnhMon.Location = new System.Drawing.Point(17, 61);
+            this.picAnhMon.Location = new System.Drawing.Point(60, 61);
             this.picAnhMon.Name = "picAnhMon";
-            this.picAnhMon.Size = new System.Drawing.Size(302, 130);
+            this.picAnhMon.Size = new System.Drawing.Size(280, 130);
             this.picAnhMon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAnhMon.TabIndex = 0;
             this.picAnhMon.TabStop = false;
             // 
             // numSoLuong
             // 
-            this.numSoLuong.Location = new System.Drawing.Point(526, 169);
+            this.numSoLuong.Location = new System.Drawing.Point(579, 166);
             this.numSoLuong.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(120, 22);
+            this.numSoLuong.Size = new System.Drawing.Size(37, 22);
             this.numSoLuong.TabIndex = 1;
             this.numSoLuong.Value = new decimal(new int[] {
             1,
@@ -70,17 +70,21 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(12, 260);
+            this.txtGhiChu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGhiChu.Location = new System.Drawing.Point(60, 260);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(405, 64);
+            this.txtGhiChu.Size = new System.Drawing.Size(410, 89);
             this.txtGhiChu.TabIndex = 2;
             this.txtGhiChu.Text = "";
             // 
             // lblTieuDe
             // 
+            this.lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTieuDe.Location = new System.Drawing.Point(203, 9);
+            this.lblTieuDe.Location = new System.Drawing.Point(230, 9);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(342, 29);
             this.lblTieuDe.TabIndex = 3;
@@ -90,7 +94,7 @@
             // 
             this.lblMon.AutoSize = true;
             this.lblMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMon.Location = new System.Drawing.Point(378, 61);
+            this.lblMon.Location = new System.Drawing.Point(438, 61);
             this.lblMon.Name = "lblMon";
             this.lblMon.Size = new System.Drawing.Size(66, 22);
             this.lblMon.TabIndex = 4;
@@ -100,7 +104,7 @@
             // 
             this.lblGia.AutoSize = true;
             this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblGia.Location = new System.Drawing.Point(378, 110);
+            this.lblGia.Location = new System.Drawing.Point(438, 114);
             this.lblGia.Name = "lblGia";
             this.lblGia.Size = new System.Drawing.Size(49, 22);
             this.lblGia.TabIndex = 5;
@@ -110,7 +114,7 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblSoLuong.Location = new System.Drawing.Point(378, 169);
+            this.lblSoLuong.Location = new System.Drawing.Point(438, 166);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(119, 22);
             this.lblSoLuong.TabIndex = 6;
@@ -120,7 +124,7 @@
             // 
             this.lblGhiChu.AutoSize = true;
             this.lblGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblGhiChu.Location = new System.Drawing.Point(12, 226);
+            this.lblGhiChu.Location = new System.Drawing.Point(55, 232);
             this.lblGhiChu.Name = "lblGhiChu";
             this.lblGhiChu.Size = new System.Drawing.Size(101, 25);
             this.lblGhiChu.TabIndex = 7;
@@ -128,18 +132,20 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(164, 364);
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHuy.Location = new System.Drawing.Point(169, 389);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(150, 57);
+            this.btnHuy.Size = new System.Drawing.Size(174, 57);
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "HỦY";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(435, 364);
+            this.btnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnXacNhan.Location = new System.Drawing.Point(440, 389);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(150, 57);
+            this.btnXacNhan.Size = new System.Drawing.Size(174, 57);
             this.btnXacNhan.TabIndex = 9;
             this.btnXacNhan.Text = "XÁC NHẬN";
             this.btnXacNhan.UseVisualStyleBackColor = true;
@@ -148,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(772, 475);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.lblGhiChu);
@@ -159,8 +165,6 @@
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.numSoLuong);
             this.Controls.Add(this.picAnhMon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPopupTreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

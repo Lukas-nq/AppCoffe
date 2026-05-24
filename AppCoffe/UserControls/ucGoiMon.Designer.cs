@@ -67,7 +67,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(992, 60);
+            this.panel1.Size = new System.Drawing.Size(877, 60);
             this.panel1.TabIndex = 0;
             // 
             // lblTieuDe
@@ -89,6 +89,7 @@
             this.btnQuayLai.TabIndex = 0;
             this.btnQuayLai.Text = "Quay lại Menu";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -105,7 +106,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(992, 407);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(877, 407);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // pnlMenuTrai
@@ -114,7 +115,7 @@
             this.pnlMenuTrai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenuTrai.Location = new System.Drawing.Point(3, 3);
             this.pnlMenuTrai.Name = "pnlMenuTrai";
-            this.pnlMenuTrai.Size = new System.Drawing.Size(589, 75);
+            this.pnlMenuTrai.Size = new System.Drawing.Size(520, 75);
             this.pnlMenuTrai.TabIndex = 1;
             // 
             // pnlTimKiem
@@ -127,7 +128,7 @@
             this.pnlTimKiem.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.pnlTimKiem.Location = new System.Drawing.Point(0, 0);
             this.pnlTimKiem.Name = "pnlTimKiem";
-            this.pnlTimKiem.Size = new System.Drawing.Size(589, 78);
+            this.pnlTimKiem.Size = new System.Drawing.Size(520, 78);
             this.pnlTimKiem.TabIndex = 0;
             // 
             // lblTimKiem
@@ -173,7 +174,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(675, 0);
+            this.label1.Location = new System.Drawing.Point(606, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(80, 0, 3, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(20);
@@ -187,7 +188,7 @@
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpMenu.Location = new System.Drawing.Point(3, 84);
             this.flpMenu.Name = "flpMenu";
-            this.flpMenu.Size = new System.Drawing.Size(589, 320);
+            this.flpMenu.Size = new System.Drawing.Size(520, 320);
             this.flpMenu.TabIndex = 3;
             // 
             // pnlHoaDonBenPhai
@@ -195,9 +196,9 @@
             this.pnlHoaDonBenPhai.Controls.Add(this.dgvGioHang);
             this.pnlHoaDonBenPhai.Controls.Add(this.panel2);
             this.pnlHoaDonBenPhai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHoaDonBenPhai.Location = new System.Drawing.Point(598, 84);
+            this.pnlHoaDonBenPhai.Location = new System.Drawing.Point(529, 84);
             this.pnlHoaDonBenPhai.Name = "pnlHoaDonBenPhai";
-            this.pnlHoaDonBenPhai.Size = new System.Drawing.Size(391, 320);
+            this.pnlHoaDonBenPhai.Size = new System.Drawing.Size(345, 320);
             this.pnlHoaDonBenPhai.TabIndex = 4;
             // 
             // dgvGioHang
@@ -217,7 +218,7 @@
             this.dgvGioHang.RowHeadersWidth = 51;
             this.dgvGioHang.RowTemplate.Height = 24;
             this.dgvGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGioHang.Size = new System.Drawing.Size(391, 222);
+            this.dgvGioHang.Size = new System.Drawing.Size(345, 222);
             this.dgvGioHang.TabIndex = 1;
             // 
             // Column1
@@ -255,7 +256,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 222);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(391, 98);
+            this.panel2.Size = new System.Drawing.Size(345, 98);
             this.panel2.TabIndex = 0;
             // 
             // btnThanhToan
@@ -292,7 +293,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "ucGoiMon";
-            this.Size = new System.Drawing.Size(992, 467);
+            this.Size = new System.Drawing.Size(877, 467);
             this.Load += new System.EventHandler(this.ucGoiMon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

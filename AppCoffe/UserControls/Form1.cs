@@ -40,5 +40,7 @@ namespace AppCoffe.UserControls
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+       
     }
 }
