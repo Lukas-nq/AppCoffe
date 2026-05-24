@@ -14,6 +14,7 @@ namespace AppCoffe.UserControls
 {
     public partial class ucGoiMon : UserControl
     {
+        string chuoiKetNoi = @"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeePOSLite;Integrated Security=True";
         public ucGoiMon()
         {
             InitializeComponent();
