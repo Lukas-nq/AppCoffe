@@ -159,6 +159,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(369, 22);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // cbDanhMuc
             // 
@@ -190,7 +191,6 @@
             this.flpMenu.Name = "flpMenu";
             this.flpMenu.Size = new System.Drawing.Size(520, 320);
             this.flpMenu.TabIndex = 3;
-            this.flpMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flpMenu_Paint);
             // 
             // pnlHoaDonBenPhai
             // 
@@ -270,6 +270,7 @@
             this.btnThanhToan.TabIndex = 1;
             this.btnThanhToan.Text = "THANH TOÁN";
             this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // lblTongTien
             // 

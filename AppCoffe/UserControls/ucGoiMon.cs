@@ -109,9 +109,33 @@ namespace AppCoffe.UserControls
             }
         }
 
-        private void flpMenu_Paint(object sender, PaintEventArgs e)
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
-
+            if (dgvGioHang.Rows.Count == 0)
+            {
+                MessageBox.Show("Chưa có món nào trong giỏ hàng. Vui lòng chọn món trước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+            DialogResult hopThoai = MessageBox.Show("Bạn có chắc chắn muốn thanh toán hóa đơn này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (hopThoai == DialogResult.Yes)
+            {         
+                MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvGioHang.Rows.Clear();
+                TinhTongTien(); //
+                this.Hide(); 
+                if (this.Parent != null)
+                {
+                    foreach (Control manHinh in this.Parent.Controls)
+                    {                   
+                        if (manHinh is ucSoDoBan)
+                        {
+                            manHinh.Show();           
+                            manHinh.BringToFront();   
+                            return;
+                        }
+                    }
+                }
+            }
         }
     }
 }
