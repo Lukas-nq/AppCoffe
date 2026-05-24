@@ -169,6 +169,7 @@
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.numSoLuong);
             this.Controls.Add(this.picAnhMon);
+            this.ForeColor = System.Drawing.Color.Fuchsia;
             this.MinimizeBox = false;
             this.Name = "frmPopupTreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
