@@ -97,7 +97,7 @@ namespace AppCoffe.GiaoDien
                 formMenu.MaximizeBox = true;
                 formMenu.MinimizeBox = false;
 
-                ucQuanLyMenu quanLyMenu = new ucQuanLyMenu();
+                ucQuanLyMenu quanLyMenu = new ucQuanLyMenu(this.userRole);
                 quanLyMenu.Dock = DockStyle.Fill;
                 formMenu.Controls.Add(quanLyMenu);
 

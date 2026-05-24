@@ -39,7 +39,7 @@
             this.picAnhMon.Dock = System.Windows.Forms.DockStyle.Top;
             this.picAnhMon.Location = new System.Drawing.Point(0, 0);
             this.picAnhMon.Name = "picAnhMon";
-            this.picAnhMon.Size = new System.Drawing.Size(160, 111);
+            this.picAnhMon.Size = new System.Drawing.Size(56, 111);
             this.picAnhMon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAnhMon.TabIndex = 0;
             this.picAnhMon.TabStop = false;
@@ -64,7 +64,7 @@
             this.lblGiaMon.AutoSize = true;
             this.lblGiaMon.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblGiaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblGiaMon.Location = new System.Drawing.Point(0, 150);
+            this.lblGiaMon.Location = new System.Drawing.Point(0, 427);
             this.lblGiaMon.Name = "lblGiaMon";
             this.lblGiaMon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.lblGiaMon.Size = new System.Drawing.Size(79, 50);
@@ -81,7 +81,7 @@
             this.Controls.Add(this.lblTenMon);
             this.Controls.Add(this.picAnhMon);
             this.Name = "usCardMonAn";
-            this.Size = new System.Drawing.Size(160, 200);
+            this.Size = new System.Drawing.Size(56, 497);
             this.Click += new System.EventHandler(this.usCardMonAn_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picAnhMon)).EndInit();
             this.ResumeLayout(false);
