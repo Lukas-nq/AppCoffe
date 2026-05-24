@@ -37,10 +37,10 @@ namespace AppCoffe.GiaoDien
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)
-        {// Sử dụng khối using để tự động đóng kết nối sau khi dùng xong
+        {
             using (SqlConnection conn = DbContext.GetConnection())
             {
-                // [2] Truy vấn kiểm tra tài khoản và mật khẩu
+  
                 string sql = "SELECT TaiKhoan, Quyen FROM NguoiDung WHERE TaiKhoan=@user AND MatKhau=@pass";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@user", txtdangnhap.Text);
@@ -49,17 +49,15 @@ namespace AppCoffe.GiaoDien
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read()) // Nếu tìm thấy tài khoản hợp lệ
+                if (reader.Read()) 
                 {
                     string role = reader["Quyen"].ToString();
                     LuuThongTin.TaiKhoan = reader["TaiKhoan"].ToString();
                     LuuThongTin.Quyen = role;
                     Quyennguoidung = role;
-
-                    // Chuyển sang màn hình chính và truyền quyền (role) sang đó
                     frmMainMenu main = new frmMainMenu(role);
                     main.Show();
-                    this.Hide(); // Ẩn màn hình đăng nhập hiện tại
+                    this.Hide(); 
                 }
                 else
                 {
