@@ -24,6 +24,7 @@ namespace AppCoffe.UserControls
             Button btnSelected = sender as Button;
             if (btnSelected == null) return;
             string tenBan = btnSelected.Text;
+            string maBan = btnSelected.Tag == null ? "" : btnSelected.Tag.ToString();
 
             if (btnSelected.BackColor == Color.Green)
             {
@@ -31,7 +32,7 @@ namespace AppCoffe.UserControls
 
                 if (r == DialogResult.Yes)
                 {
-                    if (UpdateTableStatus(tenBan, 1))
+                    if (UpdateTableStatus(maBan, 1))
                     {
                         btnSelected.BackColor = Color.Red;
                     }
@@ -44,7 +45,7 @@ namespace AppCoffe.UserControls
 
                 if (r == DialogResult.Yes)
                 {
-                    if (UpdateTableStatus(tenBan, 0))
+                    if (UpdateTableStatus(maBan, 0))
                     {
                         btnSelected.BackColor = Color.Green;
                     }
@@ -53,17 +54,17 @@ namespace AppCoffe.UserControls
             }
         }
 
-        private bool UpdateTableStatus(string tenBan, int trangThai)
+        private bool UpdateTableStatus(string maBan, int trangThai)
         {
             try
             {
                 using (SqlConnection conn = DbContext.GetConnection())
                 {
-                    string sql = "UPDATE Ban SET TrangThai = @status WHERE TenBan = @name";
+                    string sql = "UPDATE Ban SET TrangThai = @status WHERE MaBan = @maBan";
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@status", trangThai);
-                        cmd.Parameters.AddWithValue("@name", tenBan);
+                        cmd.Parameters.AddWithValue("@maBan", maBan);
                         conn.Open();
                         return cmd.ExecuteNonQuery() > 0;
                     }
@@ -102,7 +103,7 @@ namespace AppCoffe.UserControls
                 }
 
                 using (SqlConnection conn = DbContext.GetConnection())
-                using (SqlCommand cmd = new SqlCommand("SELECT TenBan, TrangThai FROM Ban ORDER BY MaBan ASC", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT MaBan, TenBan, TrangThai FROM Ban ORDER BY MaBan ASC", conn))
                 {
                     conn.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -113,6 +114,7 @@ namespace AppCoffe.UserControls
                             Button button = buttons[index];
                             if (button != null)
                             {
+                                button.Tag = reader["MaBan"].ToString();
                                 button.Text = reader["TenBan"].ToString(); // Hiển thị "Bàn 1", "Bàn 2"...
 
                                 // Đọc trạng thái từ SQL để gán màu chuẩn xác
