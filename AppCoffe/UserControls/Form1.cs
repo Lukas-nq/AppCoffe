@@ -12,7 +12,6 @@ namespace AppCoffe.UserControls
 {
     public partial class frmPopupTreo : Form
     {
-
         public string tenMonNhan;
         public decimal giaMonNhan;
         public int soLuongChot;
@@ -22,25 +21,40 @@ namespace AppCoffe.UserControls
         {
             InitializeComponent();
         }
+
         private void frmPopupTreo_Load(object sender, EventArgs e)
         {
             lblMon.Text = tenMonNhan;
             lblGia.Text = giaMonNhan.ToString("#,##0") + " VNĐ";
+
+            // Kiểm tra an toàn giá trị mặc định cho ô số lượng ban đầu
+            if (numSoLuong.Value <= 0)
+            {
+                numSoLuong.Value = 1;
+            }
         }
+
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            soLuongChot = (int)numSoLuong.Value;
-            ghiChuChot = txtGhiChu.Text;
+            // Ép kiểu chuẩn xác từ NumericUpDown sang INT
+            this.soLuongChot = Convert.ToInt32(numSoLuong.Value);
+            this.ghiChuChot = txtGhiChu.Text.Trim();
 
-            this.DialogResult = DialogResult.OK; 
+            // Kiểm tra nếu số lượng không hợp lệ
+            if (this.soLuongChot <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn số lượng món lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-
-       
     }
 }

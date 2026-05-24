@@ -14,8 +14,6 @@ namespace AppCoffe.UserControls
 {
     public partial class ucGoiMon : UserControl
     {
-        // ĐÃ XÓA: Dòng viết cứng chuỗi kết nối lỗi thời (chuoiKetNoi)
-
         public ucGoiMon()
         {
             InitializeComponent();
@@ -36,7 +34,6 @@ namespace AppCoffe.UserControls
         {
             flpMenu.Controls.Clear();
 
-            // ĐÃ SỬA: Thay thế new SqlConnection(chuoiKetNoi) thành hàm dùng chung của nhóm
             using (SqlConnection conn = DbContext.GetConnection())
             {
                 using (SqlCommand cmd = new SqlCommand(cauLenhSQL, conn))
@@ -52,11 +49,10 @@ namespace AppCoffe.UserControls
                                 string ten = rd["TenMon"].ToString();
                                 decimal gia = Convert.ToDecimal(rd["Gia"]);
 
-                                // Bọc bùa hộ mệnh tránh lỗi sập phần mềm nếu trường ảnh trong DB bị NULL
                                 string tenAnh = rd["Anh"] != DBNull.Value ? rd["Anh"].ToString() : "";
                                 string anh = !string.IsNullOrEmpty(tenAnh)
                                     ? System.IO.Path.Combine(Application.StartupPath, "Images", tenAnh)
-                                    : ""; // Nếu không có ảnh thì để chuỗi rỗng
+                                    : "";
 
                                 theMonAn.TruyenDuLieu(ten, gia, anh);
                                 theMonAn.TheBiBam += SuKien_Mo_Popup;
@@ -68,7 +64,6 @@ namespace AppCoffe.UserControls
                     {
                         MessageBox.Show("Lỗi load món: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    // ĐÃ TỐI ƯU: Sử dụng cấu trúc 'using' để C# tự động đóng kết nối (conn.Close) sạch sẽ, tránh kẹt RAM
                 }
             }
         }
@@ -76,17 +71,24 @@ namespace AppCoffe.UserControls
         private void SuKien_Mo_Popup(object sender, EventArgs e)
         {
             usCardMonAn theVuaBam = (usCardMonAn)sender;
-            frmPopupTreo popup = new frmPopupTreo();
-            popup.tenMonNhan = theVuaBam.tenMonLuu;
-            popup.giaMonNhan = theVuaBam.giaMonLuu;
 
-            if (popup.ShowDialog() == DialogResult.OK)
+            // ĐÃ SỬA: Xóa bỏ hoàn toàn các ký tự dấu sao rác gây lỗi cú pháp hệ thống
+            using (frmPopupTreo popup = new frmPopupTreo())
             {
-                int soLuong = popup.soLuongChot;
-                decimal donGia = theVuaBam.giaMonLuu;
-                decimal thanhTien = soLuong * donGia;
-                dgvGioHang.Rows.Add(theVuaBam.tenMonLuu, soLuong, donGia, thanhTien, popup.ghiChuChot);
-                TinhTongTien();
+                popup.tenMonNhan = theVuaBam.tenMonLuu;
+                popup.giaMonNhan = theVuaBam.giaMonLuu;
+
+                popup.StartPosition = FormStartPosition.CenterParent;
+
+                if (popup.ShowDialog() == DialogResult.OK)
+                {
+                    int soLuong = popup.soLuongChot;
+                    decimal donGia = theVuaBam.giaMonLuu;
+                    decimal thanhTien = soLuong * donGia;
+
+                    dgvGioHang.Rows.Add(theVuaBam.tenMonLuu, soLuong, donGia, thanhTien, popup.ghiChuChot);
+                    TinhTongTien();
+                }
             }
         }
 
@@ -105,18 +107,10 @@ namespace AppCoffe.UserControls
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            if (this.Parent != null)
+            Form formCong = this.FindForm();
+            if (formCong != null)
             {
-                foreach (Control manHinh in this.Parent.Controls)
-                {
-                    if (manHinh is ucQuanLyMenu)
-                    {
-                        manHinh.Show();
-                        manHinh.BringToFront();
-                        return;
-                    }
-                }
+                formCong.Close();
             }
         }
 
@@ -127,31 +121,20 @@ namespace AppCoffe.UserControls
                 MessageBox.Show("Chưa có món nào trong giỏ hàng. Vui lòng chọn món trước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             DialogResult hopThoai = MessageBox.Show("Bạn có chắc chắn muốn thanh toán hóa đơn này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (hopThoai == DialogResult.Yes)
             {
                 MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvGioHang.Rows.Clear();
                 TinhTongTien();
-                this.Hide();
-                if (this.Parent != null)
+
+                Form formCong = this.FindForm();
+                if (formCong != null)
                 {
-                    foreach (Control manHinh in this.Parent.Controls)
-                    {
-                        if (manHinh is ucSoDoBan)
-                        {
-                            manHinh.Show();
-                            manHinh.BringToFront();
-                            return;
-                        }
-                    }
+                    formCong.Close();
                 }
             }
-        }
-
-        private void flpMenu_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
