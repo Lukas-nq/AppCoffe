@@ -139,6 +139,7 @@
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "HỦY";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacNhan
             // 
@@ -149,6 +150,7 @@
             this.btnXacNhan.TabIndex = 9;
             this.btnXacNhan.Text = "XÁC NHẬN";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // frmPopupTreo
             // 
@@ -169,6 +171,7 @@
             this.Name = "frmPopupTreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Xác nhận chọn món";
+            this.Load += new System.EventHandler(this.frmPopupTreo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAnhMon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.ResumeLayout(false);
