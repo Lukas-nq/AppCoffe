@@ -148,5 +148,10 @@ namespace AppCoffe.UserControls
                 }
             }
         }
+
+        private void flpMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

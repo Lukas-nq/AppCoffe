@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -72,28 +73,6 @@ namespace AppCoffe.GiaoDien
             }
         }
 
-        private void GtnGoimon_Click(object sender, EventArgs e)
-        {
-            using (Form formGoiMon = new Form())
-            {
-                formGoiMon.Text = "HỆ THỐNG PHỤC VỤ KHÁCH HÀNG - GỌI MÓN";
-
-                // Đặt kích thước mặc định to một chút để chứa đủ cả cụm thực đơn và hóa đơn
-                formGoiMon.Size = new Size(1200, 750);
-                formGoiMon.StartPosition = FormStartPosition.CenterParent;
-
-                // Cho phép phóng to toàn màn hình nếu nhân viên muốn nhìn rõ hơn
-                formGoiMon.MaximizeBox = true;
-                formGoiMon.MinimizeBox = false;
-
-                // Nạp giao diện ucGoiMon vào
-                ucGoiMon goimon = new ucGoiMon();
-                goimon.Dock = DockStyle.Fill;
-                formGoiMon.Controls.Add(goimon);
-
-                formGoiMon.ShowDialog(this);
-            }
-        }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -111,6 +90,37 @@ namespace AppCoffe.GiaoDien
                 formMenu.Controls.Add(quanLyMenu);
 
                 formMenu.ShowDialog(this);
+            }
+        }
+
+        private void GtnGoimon_Click(object sender, EventArgs e)
+        {
+            // 1. Kiểm tra kết nối trước khi làm bất cứ việc gì khác
+            try
+            {
+                using (SqlConnection conn = CoffeePOSLite.Classes.DbContext.GetConnection())
+                {
+                    conn.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể kết nối Database: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Dừng luôn ở đây, không chạy code bên dưới nữa
+            }
+
+            // 2. Chỉ khi kết nối OK mới tạo và hiện Form
+            using (Form formGoiMon = new Form())
+            {
+                formGoiMon.Text = "HỆ THỐNG PHỤC VỤ KHÁCH HÀNG - GỌI MÓN";
+                formGoiMon.Size = new Size(1200, 750);
+                formGoiMon.StartPosition = FormStartPosition.CenterParent;
+
+                ucGoiMon goimon = new ucGoiMon();
+                goimon.Dock = DockStyle.Fill;
+                formGoiMon.Controls.Add(goimon);
+
+                formGoiMon.ShowDialog(this);
             }
         }
     }

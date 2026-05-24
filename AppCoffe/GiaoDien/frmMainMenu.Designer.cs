@@ -160,7 +160,6 @@
             this.Text = "frmMainMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
-            this.Click += new System.EventHandler(this.btnThongke_Click);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
