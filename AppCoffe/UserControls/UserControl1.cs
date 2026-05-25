@@ -25,9 +25,17 @@ namespace AppCoffe.UserControls
         public usCardMonAn()
         {
             InitializeComponent();
+
+            this.Click -= usCardMonAn_Click;
             this.Click += usCardMonAn_Click;
+
+            lblTenMon.Click -= usCardMonAn_Click;
             lblTenMon.Click += usCardMonAn_Click;
+
+            lblGiaMon.Click -= usCardMonAn_Click;
             lblGiaMon.Click += usCardMonAn_Click;
+
+            picAnhMon.Click -= usCardMonAn_Click;
             picAnhMon.Click += usCardMonAn_Click;
         }    
         public void TruyenDuLieu(string ten, decimal gia, string duongDanAnh)

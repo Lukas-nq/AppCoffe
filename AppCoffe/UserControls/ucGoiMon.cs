@@ -94,25 +94,11 @@ namespace AppCoffe.UserControls
         }
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            Control formCha = this.Parent;
-            if (formCha != null)
+            Form formChuaNo = this.FindForm();
+
+            if (formChuaNo != null)
             {
-                foreach (Control manHinh in formCha.Controls)
-                {
-                    if (manHinh is ucQuanLyMenu)
-                    {
-                        manHinh.Show();
-                        manHinh.BringToFront();
-                        break;
-                    }
-                }
-                formCha.Controls.Remove(this);
-                this.Dispose();
-            }
-            Form formCong = this.FindForm();
-            if (formCong != null)
-            {
-                formCong.Close();
+                formChuaNo.Close();
             }
         }
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -195,6 +181,19 @@ namespace AppCoffe.UserControls
             }
         }
 
-        
+        private void cbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM MonAn";
+            string luaChon = cbDanhMuc.Text.Trim().ToLower();
+            if (luaChon == "đồ uống")
+            {
+                sql = "SELECT * FROM MonAn WHERE MaLoai = 'L01' OR MaLoai = 'L02'";
+            }
+            else if (luaChon == "đồ ăn")
+            {
+                sql = "SELECT * FROM MonAn WHERE MaLoai = 'L03'";
+            }
+            LoadThucDon(sql);
+        }
     }
 }

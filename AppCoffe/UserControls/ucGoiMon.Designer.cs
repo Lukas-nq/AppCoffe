@@ -50,9 +50,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlMenuTrai.SuspendLayout();
@@ -183,11 +183,16 @@
             this.cbDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDanhMuc.FormattingEnabled = true;
+            this.cbDanhMuc.Items.AddRange(new object[] {
+            "Tất cả",
+            "Đồ ăn",
+            "Đồ uống"});
             this.cbDanhMuc.Location = new System.Drawing.Point(400, 21);
             this.cbDanhMuc.Margin = new System.Windows.Forms.Padding(3, 7, 3, 2);
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(121, 31);
             this.cbDanhMuc.TabIndex = 3;
+            this.cbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbDanhMuc_SelectedIndexChanged);
             // 
             // flpMenu
             // 
@@ -305,12 +310,6 @@
             this.lblTongTien.TabIndex = 0;
             this.lblTongTien.Text = "Tổng Tiền :";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label1);
@@ -330,6 +329,12 @@
             this.label1.Size = new System.Drawing.Size(267, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hóa Đơn Hiện Tại";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // ucGoiMon
             // 
