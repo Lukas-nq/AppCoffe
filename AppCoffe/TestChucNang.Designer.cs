@@ -53,7 +53,7 @@
             this.btnXacnhan.BackColor = System.Drawing.Color.Teal;
             this.btnXacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacnhan.ForeColor = System.Drawing.Color.Tomato;
-            this.btnXacnhan.Location = new System.Drawing.Point(749, 521);
+            this.btnXacnhan.Location = new System.Drawing.Point(499, 382);
             this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4);
             this.btnXacnhan.Name = "btnXacnhan";
             this.btnXacnhan.Size = new System.Drawing.Size(271, 103);
@@ -69,7 +69,7 @@
             this.panel2.Controls.Add(this.txtdangnhap);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(113, 19);
+            this.panel2.Location = new System.Drawing.Point(-12, -51);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(907, 441);
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1132, 642);
+            this.ClientSize = new System.Drawing.Size(882, 503);
             this.Controls.Add(this.btnXacnhan);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

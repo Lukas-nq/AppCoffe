@@ -138,5 +138,10 @@ namespace AppCoffe.UserControls
         {
 
         }
+
+        private void panelfooter_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

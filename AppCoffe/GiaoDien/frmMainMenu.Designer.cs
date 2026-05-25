@@ -47,7 +47,11 @@
             this.panelMenu.Controls.Add(this.btnKtraban);
             this.panelMenu.Controls.Add(this.GtnGoimon);
             this.panelMenu.Controls.Add(this.label1);
+            // Updated upstream
             this.panelMenu.Location = new System.Drawing.Point(70, -16);
+
+            this.panelMenu.Location = new System.Drawing.Point(62, -36);
+            // Stashed changes
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(772, 529);
@@ -148,9 +152,16 @@
             // 
             // frmMainMenu
             // 
+            // Updated upstream
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(78)))));
             this.ClientSize = new System.Drawing.Size(898, 542);
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(882, 503);
+            //Stashed changes
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

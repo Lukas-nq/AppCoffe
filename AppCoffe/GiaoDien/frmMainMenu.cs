@@ -34,7 +34,7 @@ namespace AppCoffe.GiaoDien
             using(Form formSoDo = new Form())
             {
                 formSoDo.FormBorderStyle = FormBorderStyle.None;
-                formSoDo.Size = new Size(850, 600);
+                formSoDo.Size = new Size(850,600);
                 formSoDo.StartPosition = FormStartPosition.CenterParent;
                 ucSoDoBan sodo = new ucSoDoBan();
                 sodo.Dock = DockStyle.Fill;
