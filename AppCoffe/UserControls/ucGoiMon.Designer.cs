@@ -343,8 +343,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(900, 550);
-            this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "ucGoiMon";
             this.Size = new System.Drawing.Size(900, 550);
             this.Load += new System.EventHandler(this.ucGoiMon_Load);
