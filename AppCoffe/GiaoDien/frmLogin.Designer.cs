@@ -66,7 +66,7 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(78)))));
             this.panel2.Controls.Add(this.btnXacnhan);
             this.panel2.Controls.Add(this.txtmatkhau);
             this.panel2.Controls.Add(this.txtdangnhap);
@@ -93,11 +93,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
             this.label2.Location = new System.Drawing.Point(200, 156);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 46);
+            this.label2.Size = new System.Drawing.Size(176, 45);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tài Khoản :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -106,11 +106,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
             this.label3.Location = new System.Drawing.Point(200, 241);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 46);
+            this.label3.Size = new System.Drawing.Size(177, 45);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mật Khẩu :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;

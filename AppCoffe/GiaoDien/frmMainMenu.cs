@@ -33,8 +33,10 @@ namespace AppCoffe.GiaoDien
         {
             using(Form formSoDo = new Form())
             {
-                formSoDo.FormBorderStyle = FormBorderStyle.None;
-                formSoDo.Size = new Size(850, 600);
+                formSoDo.FormBorderStyle = FormBorderStyle.Sizable;
+                formSoDo.MaximizeBox = true; // Cho phép phóng to
+                formSoDo.MinimizeBox = true; // Cho phép thu nhỏ
+                formSoDo.Size = new Size(850,600);
                 formSoDo.StartPosition = FormStartPosition.CenterParent;
                 ucSoDoBan sodo = new ucSoDoBan();
                 sodo.Dock = DockStyle.Fill;
