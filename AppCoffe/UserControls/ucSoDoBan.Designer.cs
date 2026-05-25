@@ -232,13 +232,13 @@
             // btnBack
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.BackColor = System.Drawing.Color.Teal;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBack.Location = new System.Drawing.Point(578, 6);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(78)))));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
+            this.btnBack.Location = new System.Drawing.Point(674, 24);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(199, 92);
+            this.btnBack.Size = new System.Drawing.Size(164, 64);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Quay Lại";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -246,10 +246,10 @@
             // 
             // labelBan
             // 
-            this.labelBan.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.labelBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(78)))));
             this.labelBan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelBan.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
             this.labelBan.Location = new System.Drawing.Point(0, 0);
             this.labelBan.Name = "labelBan";
             this.labelBan.Size = new System.Drawing.Size(900, 90);
@@ -260,6 +260,7 @@
             // 
             // panelMain
             // 
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelMain.Controls.Add(this.panelfooter);
             this.panelMain.Controls.Add(this.flowLayoutPanel1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
