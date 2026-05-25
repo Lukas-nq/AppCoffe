@@ -47,7 +47,7 @@
             this.panelMenu.Controls.Add(this.btnKtraban);
             this.panelMenu.Controls.Add(this.GtnGoimon);
             this.panelMenu.Controls.Add(this.label1);
-            this.panelMenu.Location = new System.Drawing.Point(62, -36);
+            this.panelMenu.Location = new System.Drawing.Point(70, -16);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(772, 529);
@@ -150,14 +150,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(882, 503);
+            this.ClientSize = new System.Drawing.Size(898, 542);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 550);
-            this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu điều hướng";

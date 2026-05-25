@@ -80,13 +80,19 @@ namespace AppCoffe.GiaoDien
             using (Form formMenu = new Form())
             {
                 formMenu.Text = "HỆ THỐNG QUẢN LÝ THỰC ĐƠN - MENU";
-                formMenu.Size = new Size(1100, 680);
+
+                formMenu.AutoScaleMode = AutoScaleMode.None;
+
+                formMenu.ClientSize = new Size(900, 550);
+
                 formMenu.StartPosition = FormStartPosition.CenterParent;
-                formMenu.MaximizeBox = true;
+                formMenu.MaximizeBox = true; 
                 formMenu.MinimizeBox = false;
 
                 ucQuanLyMenu quanLyMenu = new ucQuanLyMenu(this.userRole);
+
                 quanLyMenu.Dock = DockStyle.Fill;
+
                 formMenu.Controls.Add(quanLyMenu);
 
                 formMenu.ShowDialog(this);
