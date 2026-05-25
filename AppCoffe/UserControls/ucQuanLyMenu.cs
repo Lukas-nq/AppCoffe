@@ -26,22 +26,23 @@ namespace AppCoffe.UserControls
         {
             try
             {
-                string sql = "SELECT MaMon AS 'Mã Món', TenMon AS 'Tên Món', Gia AS 'Đơn Giá', MaLoai AS 'Mã Loại', Anh FROM MonAn WHERE 1=1";
+                string sql = "SELECT MaMon, TenMon, Gia, MaLoai, Anh FROM MonAn WHERE 1=1";
+
                 if (!string.IsNullOrEmpty(txtTimKiem.Text))
                 {
                     sql += " AND TenMon LIKE N'%" + txtTimKiem.Text.Trim() + "%'";
                 }
+
                 if (cboLocLoai.SelectedValue != null && cboLocLoai.SelectedValue.ToString() != "ALL")
                 {
                     sql += " AND MaLoai = '" + cboLocLoai.SelectedValue.ToString() + "'";
-
                 }
                 DataTable dt = DbContext.GetDataTable(sql);
+
+                dgvMenu.AutoGenerateColumns = false;
+
                 dgvMenu.DataSource = dt;
-                if (dgvMenu.Columns["Anh"] != null)
-                {
-                    dgvMenu.Columns["Anh"].Visible = false;
-                }
+
             }
             catch (Exception ex)
             {
@@ -84,7 +85,7 @@ namespace AppCoffe.UserControls
                 btnThem.Visible = false;
                 btnSua.Visible = false;
                 btnXoa.Visible = false;
-                btnChonAnh.Visible = false; // Nhân viên không được đổi ảnh món
+                btnChonAnh.Visible = false;
             }
 
         }
