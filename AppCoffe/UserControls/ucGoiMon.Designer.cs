@@ -77,13 +77,14 @@
             // btnQuayLai
             // 
             this.btnQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(78)))));
+            this.btnQuayLai.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnQuayLai.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnQuayLai.FlatAppearance.BorderSize = 2;
             this.btnQuayLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
-            this.btnQuayLai.Location = new System.Drawing.Point(753, 5);
+            this.btnQuayLai.Location = new System.Drawing.Point(756, 0);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(144, 55);
+            this.btnQuayLai.Size = new System.Drawing.Size(144, 60);
             this.btnQuayLai.TabIndex = 6;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = false;
