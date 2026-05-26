@@ -92,26 +92,27 @@ namespace AppCoffe.UserControls
 
         private void dgvMenu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && !dgvMenu.Rows[e.RowIndex].IsNewRow)
             {
                 if (string.Equals(quyenNguoiDung, "Admin", StringComparison.OrdinalIgnoreCase))
                 {
-                    btnThem.Text = "Thêm";
-                    btnSua.Text = "Sửa";
-                    btnXoa.Text = "Xóa";
-                    btnThem.Enabled = true;
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
+                    btnThem.Text = "Thêm"; btnSua.Text = "Sửa"; btnXoa.Text = "Xóa";
+                    btnThem.Enabled = true; btnSua.Enabled = true; btnXoa.Enabled = true;
                 }
 
                 DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
 
-                txtMaMon.Text = row.Cells["Mã Món"].Value.ToString();
-                txtTenMon.Text = row.Cells["Tên Món"].Value.ToString();
-                txtDonGia.Text = row.Cells["Đơn Giá"].Value.ToString();
-                txtMaLoai.Text = row.Cells["Mã Loại"].Value.ToString();
+                txtMaMon.Text = row.Cells[0].Value?.ToString() ?? "";
+                txtTenMon.Text = row.Cells[1].Value?.ToString() ?? "";
+                txtDonGia.Text = row.Cells[2].Value?.ToString() ?? "";
+                txtMaLoai.Text = row.Cells[3].Value?.ToString() ?? "";
 
-                string tenFileAnh = row.Cells["Anh"].Value == DBNull.Value ? "" : row.Cells["Anh"].Value.ToString();
+                string tenFileAnh = "";
+                if (row.DataBoundItem is DataRowView rowView)
+                {
+                    tenFileAnh = rowView["Anh"] == DBNull.Value ? "" : rowView["Anh"].ToString();
+                }
+
                 HienThiAnhMon(tenFileAnh);
                 tenFileAnhDuocChon = "";
             }
