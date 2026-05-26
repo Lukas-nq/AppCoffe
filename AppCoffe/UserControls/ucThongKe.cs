@@ -166,7 +166,6 @@ namespace AppCoffe.UserControls
 
             return schema;
         }
-
         private string TaoCauLenhThongKe(BaoCaoSchema schema)
         {
             string soLuongExpr = "ct." + QuoteName(schema.CotSoLuong);
