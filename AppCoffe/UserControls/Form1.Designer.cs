@@ -56,14 +56,10 @@
             this.numSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.numSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.numSoLuong.Location = new System.Drawing.Point(339, 229);
-            this.numSoLuong.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(56, 30);
             this.numSoLuong.TabIndex = 1;
+            this.numSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numSoLuong.Value = new decimal(new int[] {
             1,
             0,

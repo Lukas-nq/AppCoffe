@@ -195,5 +195,42 @@ namespace AppCoffe.UserControls
             }
             LoadThucDon(sql);
         }
+
+        private void dgvGioHang_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {           
+            if (e.RowIndex < 0) return;
+            if (e.ColumnIndex == 1)
+            {
+                DataGridViewRow dongHienTai = dgvGioHang.Rows[e.RowIndex];
+
+                if (dongHienTai.Cells[1].Value != null)
+                {
+                    int soLuongMoi = 0;
+
+                    if (int.TryParse(dongHienTai.Cells[1].Value.ToString(), out soLuongMoi))
+                    {
+                        if (soLuongMoi <= 0)
+                        {
+                            this.BeginInvoke(new Action(() =>
+                            {
+                                dgvGioHang.Rows.Remove(dongHienTai);
+                                TinhTongTien();
+                            }));
+                        }
+                        else
+                        {
+                            decimal donGia = Convert.ToDecimal(dongHienTai.Cells[2].Value);
+                            dongHienTai.Cells[3].Value = soLuongMoi * donGia;
+                            TinhTongTien();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chỉ nhập số tự nhiên!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        dongHienTai.Cells[1].Value = 1;
+                    }
+                }
+            }
+        }
     }
 }
