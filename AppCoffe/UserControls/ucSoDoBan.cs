@@ -82,7 +82,7 @@ namespace AppCoffe.UserControls
             Form formHienTai = this.FindForm();
             if (formHienTai != null)
             {
-                formHienTai.Close(); // Tự động đóng Form popup bọc ngoài
+                formHienTai.Close();
             }
         }
 
@@ -115,9 +115,9 @@ namespace AppCoffe.UserControls
                             if (button != null)
                             {
                                 button.Tag = reader["MaBan"].ToString();
-                                button.Text = reader["TenBan"].ToString(); // Hiển thị "Bàn 1", "Bàn 2"...
+                                button.Text = reader["TenBan"].ToString(); 
 
-                                // Đọc trạng thái từ SQL để gán màu chuẩn xác
+                               
                                 int trangThai = Convert.ToInt32(reader["TrangThai"]);
                                 button.BackColor = (trangThai == 1) ? Color.Red : Color.Green;
 

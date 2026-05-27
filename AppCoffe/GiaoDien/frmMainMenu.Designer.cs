@@ -63,7 +63,7 @@
             this.btndangxuat.Location = new System.Drawing.Point(14, 448);
             this.btndangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndangxuat.Name = "btndangxuat";
-            this.btndangxuat.Size = new System.Drawing.Size(144, 55);
+            this.btndangxuat.Size = new System.Drawing.Size(187, 55);
             this.btndangxuat.TabIndex = 5;
             this.btndangxuat.Text = "Đăng xuất";
             this.btndangxuat.UseVisualStyleBackColor = false;

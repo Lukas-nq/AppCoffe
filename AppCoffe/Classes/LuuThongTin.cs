@@ -7,9 +7,9 @@ namespace CoffeePOSLite.Classes
     // 1. CLASS LƯU TRẠNG THÁI TOÀN CỤC (GLOBAL SESSION)
     public static class LuuThongTin
     {
-        public static string TaiKhoan; // Lưu tên người vừa đăng nhập thành công
-        public static string Quyen;    // Lưu "Admin" hoặc "Staff" để ẩn/hiện nút chức năng
-        public static string MaHDVuaThanhToan; // Biến tạm truyền dữ liệu từ Gọi món sang Sơ đồ bàn để đặt vị trí
+        public static string TaiKhoan; 
+        public static string Quyen;    
+        public static string MaHDVuaThanhToan; 
     }
 
     // 2. CLASS KẾT NỐI DỮ LIỆU CHUNG (DATABASE CONTEXT)

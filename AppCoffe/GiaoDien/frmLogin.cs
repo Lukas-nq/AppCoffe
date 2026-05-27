@@ -43,7 +43,7 @@ namespace AppCoffe.GiaoDien
                 if (string.IsNullOrWhiteSpace(txtdangnhap.Text) || string.IsNullOrWhiteSpace(txtmatkhau.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Dừng lại không thực hiện code phía dưới
+                    return; 
                 }
                 string sql = "SELECT TaiKhoan, Quyen FROM NguoiDung WHERE TaiKhoan=@user AND MatKhau=@pass";
                 SqlCommand cmd = new SqlCommand(sql, conn);

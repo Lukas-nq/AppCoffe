@@ -34,8 +34,8 @@ namespace AppCoffe.GiaoDien
             using(Form formSoDo = new Form())
             {
                 formSoDo.FormBorderStyle = FormBorderStyle.Sizable;
-                formSoDo.MaximizeBox = true; // Cho phép phóng to
-                formSoDo.MinimizeBox = true; // Cho phép thu nhỏ
+                formSoDo.MaximizeBox = true; 
+                formSoDo.MinimizeBox = true; 
                 formSoDo.Size = new Size(850,600);
                 formSoDo.StartPosition = FormStartPosition.CenterParent;
                 ucSoDoBan sodo = new ucSoDoBan();
@@ -78,32 +78,23 @@ namespace AppCoffe.GiaoDien
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            // KHÔNG chặn quyền ở đây nữa, để Staff bấm vào vẫn mở được giao diện xem danh sách món
             using (Form formMenu = new Form())
             {
                 formMenu.Text = "HỆ THỐNG QUẢN LÝ THỰC ĐƠN - MENU";
-
                 formMenu.AutoScaleMode = AutoScaleMode.None;
-
                 formMenu.ClientSize = new Size(900, 550);
-
                 formMenu.StartPosition = FormStartPosition.CenterParent;
                 formMenu.MaximizeBox = true; 
-                formMenu.MinimizeBox = false;
-
+                formMenu.MinimizeBox = true;
                 ucQuanLyMenu quanLyMenu = new ucQuanLyMenu(this.userRole);
-
                 quanLyMenu.Dock = DockStyle.Fill;
-
                 formMenu.Controls.Add(quanLyMenu);
-
                 formMenu.ShowDialog(this);
             }
         }
 
         private void GtnGoimon_Click(object sender, EventArgs e)
         {
-            // 1. Kiểm tra kết nối trước khi làm bất cứ việc gì khác
             try
             {
                 using (SqlConnection conn = CoffeePOSLite.Classes.DbContext.GetConnection())
@@ -114,10 +105,9 @@ namespace AppCoffe.GiaoDien
             catch (Exception ex)
             {
                 MessageBox.Show("Không thể kết nối Database: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Dừng luôn ở đây, không chạy code bên dưới nữa
+                return; 
             }
 
-            // 2. Chỉ khi kết nối OK mới tạo và hiện Form
             using (Form formGoiMon = new Form())
             {
                 formGoiMon.Text = "HỆ THỐNG PHỤC VỤ KHÁCH HÀNG - GỌI MÓN";
