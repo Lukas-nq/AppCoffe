@@ -25,7 +25,6 @@ namespace AppCoffe.GiaoDien
             if (!string.Equals(userRole, "Admin", StringComparison.OrdinalIgnoreCase))
             {
                 btnThongke.Visible = false;
-                btnThongke.Enabled = false;
             }
         }
 
@@ -55,12 +54,6 @@ namespace AppCoffe.GiaoDien
 
         private void btnThongke_Click(object sender, EventArgs e)
         {
-            if (!string.Equals(userRole, "Admin", StringComparison.OrdinalIgnoreCase))
-            {
-                MessageBox.Show("Chỉ tài khoản Admin mới được xem thống kê doanh thu.", "Không có quyền truy cập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             using (Form formThongKe = new Form())
             {
                 formThongKe.Text = "Báo cáo thống kê doanh thu";
@@ -95,18 +88,7 @@ namespace AppCoffe.GiaoDien
 
         private void GtnGoimon_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (SqlConnection conn = CoffeePOSLite.Classes.DbContext.GetConnection())
-                {
-                    conn.Open();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Không thể kết nối Database: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
-            }
+            
 
             using (Form formGoiMon = new Form())
             {
