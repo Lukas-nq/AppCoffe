@@ -57,8 +57,11 @@ namespace AppCoffe.GiaoDien
             using (Form formThongKe = new Form())
             {
                 formThongKe.Text = "Báo cáo thống kê doanh thu";
+                formThongKe.FormBorderStyle = FormBorderStyle.Sizable;
+                formThongKe.MaximizeBox = true;
+                formThongKe.MinimizeBox = true;
+                formThongKe.Size = new Size(900, 550);
                 formThongKe.StartPosition = FormStartPosition.CenterParent;
-                formThongKe.WindowState = FormWindowState.Maximized;
 
                 ucThongKe thongKe = new ucThongKe();
                 thongKe.Dock = DockStyle.Fill;
